@@ -14,7 +14,8 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        //
+      $customers = Customers::all();      
+      return view('customers.index', compact('customers'));
     }
 
     /**
@@ -24,7 +25,7 @@ class CustomersController extends Controller
      */
     public function create()
     {
-        //
+        return view('customers.create');
     }
 
     /**
@@ -35,7 +36,10 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //User::create(array_merge($request->all(), ['index' => 'value']));
+
+        Customers::create($request->except('_token'));
+        return redirect('customers')->with('success', 'Новый клиент добавлен');
     }
 
     /**

@@ -13,6 +13,8 @@ class Customers extends Model
    */
   protected $table = 'customers';
 
+  protected $guarded = [];
+
 
   /**
    * Customer может иметь множество детей.
