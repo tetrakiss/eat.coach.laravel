@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customers;
+use App\Children;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
@@ -14,7 +15,7 @@ class CustomersController extends Controller
      */
     public function index()
     {
-      $customers = Customers::all();      
+      $customers = Customers::all();
       return view('customers.index', compact('customers'));
     }
 
@@ -48,10 +49,24 @@ class CustomersController extends Controller
      * @param  \App\Customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function show(Customers $customers)
+    /*public function show(Customers $customers)
     {
-        //
+      dd($customers->id);
+      $customer = Customers::where('id', $customers->id)->first();
+
+      return view('customers.show')
+            ->with('customer', $customer);
+    }*/
+
+    public function show($id)
+    {
+
+      $customer = Customers::findOrFail($id);
+      $children= $customer->children;
+      return view('customers.show')
+            ->with('customer', $customer);
     }
+
 
     /**
      * Show the form for editing the specified resource.

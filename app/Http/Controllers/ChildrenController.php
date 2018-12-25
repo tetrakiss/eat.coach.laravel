@@ -12,7 +12,7 @@ class ChildrenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($customer_id)
     {
         //
     }
@@ -22,9 +22,9 @@ class ChildrenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($customer_id)
     {
-        //
+        return view('children.create')->with('customer', $customer_id);
     }
 
     /**

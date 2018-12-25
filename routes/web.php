@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('customers', 'CustomersController');
+
+Route::resource('children.user', 'ChildrenController');
