@@ -64,7 +64,8 @@ class CustomersController extends Controller
       $customer = Customers::findOrFail($id);
       $children= $customer->children;
       return view('customers.show')
-            ->with('customer', $customer);
+            ->with('customer', $customer)
+            ->with('children', $children);
     }
 
 

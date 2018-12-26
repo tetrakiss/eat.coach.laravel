@@ -14,7 +14,20 @@
   <div><a href="{{action('CustomersController@edit', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Редактировать</a> </div>
   </div>
   <div>
-    <div><a href="{{action('CustomersController@edit', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Добавить ребенка</a> </div>
+    @foreach($children as $key => $value)
+    <div>{{ $value->first_name }} {{ $value->last_name }}</div>
+    <div>{{ $value->birthday }}</div>
+    <div><a href="{{action('ChildrenController@edit', [$customer['id'], $value->id])}}" class="uk-button uk-button-small uk-button-default">Редактировать</a>
+      <form action="{{action('ChildrenController@destroy', [$customer['id'], $value->id])}}" method="post">
+        @csrf
+        <input name="_method" type="hidden" value="DELETE">
+        <button class=" uk-button uk-button-small uk-button-danger" type="submit">Удалить</button>
+      </form>
+
+    </div>
+
+     @endforeach
+    <div><a href="{{action('ChildrenController@create', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Добавить ребенка</a> </div>
   </div>
 </div>
 <div  uk-grid class="uk-grid-medium uk-child-width-expand@s uk-text-center">

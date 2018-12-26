@@ -2,8 +2,11 @@
 @extends('layouts.eat')
 
 @section('content')
-<form  method="post" action="{{url('children')}}" >
-        @csrf
+
+{!! Form::open(['route'=>['customers.children.store', $customer->id]]) !!}
+<form  method="post" action="{{url('customers.children')}}" >
+        
+        <input  type="hidden" name="customer_id" value="{{$customer->id}}">
 
         <div class="uk-margin">
             <input class="uk-input" type="text" name="first_name" placeholder="Имя">
@@ -21,5 +24,5 @@
           <div class="uk-margin">
         <button type="submit" class="uk-button uk-button-default">Добавить</button>
         </div>
-</form>
+{!! Form::close() !!}
 @endsection

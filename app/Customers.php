@@ -23,7 +23,7 @@ class Customers extends Model
    */
     public function children()
     {
-        return $this->hasMany(Children::class);
+        return $this->hasMany(Children::class, 'customer_id');
     }
 
     /**

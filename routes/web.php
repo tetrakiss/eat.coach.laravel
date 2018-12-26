@@ -19,7 +19,11 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['middleware' => 'auth'], function()
+{
 
-Route::resource('customers', 'CustomersController');
+  Route::resource('customers', 'CustomersController');
 
-Route::resource('children.user', 'ChildrenController');
+  Route::resource('customers.children', 'ChildrenController');
+
+});
