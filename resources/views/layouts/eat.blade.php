@@ -36,6 +36,34 @@
     <link href="{{ asset('css/eat.css') }}" rel="stylesheet">
 </head>
 <body>
+  <nav class="uk-navbar uk-navbar-container uk-margin">
+    <div class="uk-navbar-left">
+        <a uk-toggle="target: #offcanvas-overlay" class="uk-navbar-toggle" href="#">
+            <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+        </a>
+    </div>
+</nav>
+<div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+
+        <ul class="uk-list uk-list-divider">
+          <li><a href="{{route('customers.index')}}">Все клиенты</a></li>
+          <li><a href="{{route('customers.create')}}">Добавить клиента</a></li>
+          <li><a  href="{{ route('logout') }}"
+             onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+              Выйти
+          </a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form></li>
+        </ul>
+    </div>
+</div>
   <div uk-grid>
     <div class="uk-width-1-1">
       @yield('content')
