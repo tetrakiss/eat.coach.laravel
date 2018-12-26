@@ -26,4 +26,6 @@ Route::group(['middleware' => 'auth'], function()
 
   Route::resource('customers.children', 'ChildrenController');
 
+  Route::get("search","CustomersController@search");
+
 });

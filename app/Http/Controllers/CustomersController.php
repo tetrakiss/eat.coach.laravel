@@ -102,4 +102,15 @@ class CustomersController extends Controller
     {
         //
     }
+
+    public function search(Request $request)
+    {
+    	if($request->has('search')){
+    		$customers = Customers::search($request->get('search'))->get();
+    	}else{
+    		$customers = Customers::get();
+    	}
+
+      return view('customers.index', compact('customers'));
+    }
 }

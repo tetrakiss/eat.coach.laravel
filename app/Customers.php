@@ -3,9 +3,37 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Customers extends Model
 {
+  use SearchableTrait;
+  /**
+     * Searchable rules.
+     *
+     * @var array
+     */
+    protected $searchable = [
+        /**
+         * Columns and their priority in search results.
+         * Columns with higher values are more important.
+         * Columns with equal values have equal importance.
+         *
+         * @var array
+         */
+        'columns' => [
+            'customers.first_name' => 10,
+            'customers.last_name' => 10,
+            'customers.phone' => 2,
+            'customers.email' => 5,
+            'children.first_name' => 2,
+            'children.last_name' => 1,
+        ],
+        'joins' => [
+            'children' => ['customers.id','children.customer_id'],
+        ],
+    ];
+
   /**
    * The table associated with the model.
    *

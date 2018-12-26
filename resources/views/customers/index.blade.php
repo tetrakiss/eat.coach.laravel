@@ -1,6 +1,16 @@
 @extends('layouts.eat')
 
 @section('content')
+<form method="GET" action="{{ url('search') }}">
+			<div  uk-grid class="uk-grid-medium uk-child-width-expand@s uk-text-center">
+        <div class="uk-margin">
+            <input class="uk-input" type="text" name="search" placeholder="Поиск....">
+        </div>
+        <div class="uk-margin">
+      <button type="submit" class="uk-button uk-button-default">Поиск</button>
+      </div>
+			</div>
+		</form>
 <table class="uk-table uk-table-hover uk-table-divider">
     <thead>
         <tr>

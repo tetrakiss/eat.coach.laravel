@@ -1,6 +1,7 @@
 @extends('layouts.eat')
 
 @section('content')
+
 <div  uk-grid class="uk-grid-medium uk-child-width-expand@s uk-text-center">
   <div>
   <h3>{{$customer->first_name}} {{$customer->last_name}} </h3>
