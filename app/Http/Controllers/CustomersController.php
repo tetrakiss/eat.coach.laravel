@@ -75,9 +75,10 @@ class CustomersController extends Controller
      * @param  \App\Customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function edit(Customers $customers)
+    public function edit($id)
     {
-        //
+      $customer = Customers::find($id);
+      return view('customers.edit',compact('customer','id'));
     }
 
     /**
@@ -87,9 +88,15 @@ class CustomersController extends Controller
      * @param  \App\Customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Customers $customers)
+    public function update(Request $request, $id)
     {
-        //
+  //save data into database
+   Customers::find($id)->update($request->all());
+        //Customers::create($request->all());
+
+        //redirect to post index page
+        return redirect()->route('customers.index')
+                        ->with('success','Клиент успешно обновлен');
     }
 
     /**
@@ -98,9 +105,13 @@ class CustomersController extends Controller
      * @param  \App\Customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customers $customers)
+    public function destroy($id)
     {
-        //
+       Customers::find($id)->delete();
+
+       return redirect()->route('customers.index')
+                       ->with('success','Клиент успешно удален из базы');
+
     }
 
     public function search(Request $request)

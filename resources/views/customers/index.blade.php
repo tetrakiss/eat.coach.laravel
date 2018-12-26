@@ -27,9 +27,9 @@
       @foreach($customers as $customer)
         <tr>
             <td><a href="{{action('CustomersController@show', $customer['id'])}}">{{$customer['first_name']}} {{$customer['last_name']}}</a></td>
-            <td>{{$customer['email']}}</td>
+            <td><a href="mailto:{{$customer['email']}}">{{$customer['email']}}</a></td>
             <td>{{$customer['phone']}}</td>
-            <td>{{$customer['skype']}}</td>
+            <td><a href="skype:{{$customer['skype']}}?chat">{{$customer['skype']}}</a></td>
             <td>{{$customer['next_date']}}</td>
             <td><a href="{{action('CustomersController@edit', $customer['id'])}}" class="floatL uk-button uk-button-small uk-button-default">Редактировать</a>
                <form action="{{action('CustomersController@destroy', $customer['id'])}}" method="post">
