@@ -60,10 +60,12 @@ class ChildrenController extends Controller
      * @param  \App\Children  $children
      * @return \Illuminate\Http\Response
      */
-    public function edit(Children $children)
-    {
-        //
-    }
+     public function edit($customer_id, $id)
+     {
+       $child = Children::find($id);
+
+       return view('children.edit',compact('child','customer_id'));
+     }
 
     /**
      * Update the specified resource in storage.
@@ -72,9 +74,12 @@ class ChildrenController extends Controller
      * @param  \App\Children  $children
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Children $children)
+    public function update(Request $request, $customer_id, $id)
     {
-        //
+      //save data into database
+       Children::find($id)->update($request->all());
+
+       return redirect()->route('customers.show', ['id' => $customer_id]);
     }
 
     /**

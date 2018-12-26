@@ -4,8 +4,8 @@
 @section('content')
 
 {!! Form::open(['route'=>['customers.children.store', $customer->id]]) !!}
-<form  method="post" action="{{url('customers.children')}}" >
-        
+
+
         <input  type="hidden" name="customer_id" value="{{$customer->id}}">
 
         <div class="uk-margin">
@@ -18,8 +18,9 @@
             <input class="uk-input" type="text" name="birthday" placeholder="День рождения">
         </div>
         <div class="uk-margin">
-            <input class="uk-input" type="text" name="comment" placeholder="Комментарии">
+            <textarea class="uk-textarea" name="comment" rows="5" placeholder="Комментарий"></textarea>
         </div>
+
 
           <div class="uk-margin">
         <button type="submit" class="uk-button uk-button-default">Добавить</button>
