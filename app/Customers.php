@@ -95,7 +95,7 @@ class Customers extends Model
        */
         public function appointments()
         {
-            return $this->hasMany(Appointments::class);
+            return $this->hasMany(Appointments::class, 'customer_id');
         }
 
         /**

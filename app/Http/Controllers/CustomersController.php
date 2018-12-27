@@ -64,10 +64,12 @@ class CustomersController extends Controller
       $customer = Customers::findOrFail($id);
       $children = $customer->children;
       $comments = $customer->comments;
+      $appointments = $customer->appointments;
       return view('customers.show')
             ->with('customer', $customer)
             ->with('children', $children)
-            ->with('comments', $comments);
+            ->with('comments', $comments)
+            ->with('appointments', $appointments);
     }
 
 

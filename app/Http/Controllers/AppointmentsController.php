@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Appointments;
+use App\Customers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AppointmentsController extends Controller
 {
@@ -22,9 +24,9 @@ class AppointmentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Customers $customer)
     {
-        //
+        return view('appointments.create')->with('customer', $customer);
     }
 
     /**
@@ -35,7 +37,9 @@ class AppointmentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      Appointments::create(array_merge($request->except('_token'), ['added_by_user_id' => Auth::id()]));
+
+      return redirect()->route('customers.show', ['id' => $request->customer_id]);
     }
 
     /**
@@ -55,10 +59,12 @@ class AppointmentsController extends Controller
      * @param  \App\Appointments  $appointments
      * @return \Illuminate\Http\Response
      */
-    public function edit(Appointments $appointments)
-    {
-        //
-    }
+     public function edit($customer_id, $id)
+     {
+       $appointment = Appointments::find($id);
+
+       return view('appointments.edit',compact('appointment','customer_id'));
+     }
 
     /**
      * Update the specified resource in storage.
@@ -67,10 +73,13 @@ class AppointmentsController extends Controller
      * @param  \App\Appointments  $appointments
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Appointments $appointments)
-    {
-        //
-    }
+     public function update(Request $request, $customer_id, $id)
+     {
+       //save data into database
+        Appointments::find($id)->update(array_merge($request->except('_token'), ['added_by_user_id' => Auth::id()]));
+
+        return redirect()->route('customers.show', ['id' => $customer_id]);
+     }
 
     /**
      * Remove the specified resource from storage.
@@ -78,8 +87,10 @@ class AppointmentsController extends Controller
      * @param  \App\Appointments  $appointments
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Appointments $appointments)
-    {
-        //
-    }
+     public function destroy($customer, $appointment)
+     {
+       $comment = Appointments::findOrFail($appointment);
+       $comment->delete();
+       return redirect()->back();
+     }
 }

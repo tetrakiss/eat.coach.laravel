@@ -34,8 +34,21 @@
 <div  uk-grid class="uk-grid-medium uk-child-width-expand@s uk-text-center">
   <div>
   <h3>Назначения</h3>
+  @foreach($appointments as $key => $value)
+    <div>{{ $value->med }}</div>
+    <div><a target="_blank" href="{{ $value->med_link }}" class=" uk-button uk-button-small uk-button-default">ссылка</a></div>
+    <div>{{ $value->medication }}</div>
+    <div>Добавлено: {{ $value->created_at }} {{{ $value->created_at == $value->updated_at ? "" : "Обновленно: ".$value->updated_at }}}</div>
+    <div><a href="{{action('AppointmentsController@edit',[$customer['id'], $value->id])}}" class=" uk-button uk-button-small uk-button-default">Редактировать</a>
+      <form action="{{action('AppointmentsController@destroy', [$customer['id'], $value->id])}}" method="post">
+        @csrf
+        <input name="_method" type="hidden" value="DELETE">
+        <button class=" uk-button uk-button-small uk-button-danger" type="submit">Удалить</button>
+      </form>
+    </div>
+   @endforeach
 
-  <div><a href="{{action('CustomersController@edit', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Добавить</a> </div>
+  <div><a href="{{action('AppointmentsController@create', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Добавить</a> </div>
   </div>
   <div>
     <h3>Комментарии</h3>

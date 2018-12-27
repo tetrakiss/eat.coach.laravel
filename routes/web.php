@@ -28,6 +28,8 @@ Route::group(['middleware' => 'auth'], function()
 
   Route::resource('customers.comments', 'CommentsController');
 
+  Route::resource('customers.appointments', 'AppointmentsController');
+
   Route::get("search","CustomersController@search");
 
 });
