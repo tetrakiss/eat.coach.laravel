@@ -42,6 +42,7 @@
             <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
         </a>
     </div>
+    <!--<a href="{{ url()->previous() }}" class="btn btn-default">Back</a> -->
 </nav>
 <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar">
@@ -64,10 +65,9 @@
         </ul>
     </div>
 </div>
-  <div uk-grid>
-    <div class="uk-width-1-1">
+  <div>  
       @yield('content')
     </div>
-  </div>
+
 </body>
 </html>
