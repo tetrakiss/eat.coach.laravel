@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Comments;
+use App\Customers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommentsController extends Controller
 {
@@ -22,9 +24,9 @@ class CommentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Customers $customer)
     {
-        //
+          return view('comments.create')->with('customer', $customer);
     }
 
     /**
@@ -35,7 +37,9 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      Comments::create(array_merge($request->except('_token'), ['added_by_user_id' => Auth::id()]));
+      
+      return redirect()->route('customers.show', ['id' => $request->customer_id]);
     }
 
     /**

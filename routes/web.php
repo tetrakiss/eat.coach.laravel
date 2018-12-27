@@ -26,6 +26,8 @@ Route::group(['middleware' => 'auth'], function()
 
   Route::resource('customers.children', 'ChildrenController');
 
+  Route::resource('customers.comments', 'CommentsController');
+
   Route::get("search","CustomersController@search");
 
 });

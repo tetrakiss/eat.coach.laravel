@@ -73,7 +73,7 @@ class Customers extends Model
      */
       public function comments()
       {
-          return $this->hasMany(Comments::class);
+          return $this->hasMany(Comments::class, 'customer_id');
       }
 
       /**

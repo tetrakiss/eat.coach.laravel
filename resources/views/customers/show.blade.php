@@ -39,7 +39,11 @@
   </div>
   <div>
     <h3>Комментарии</h3>
-    <div><a href="{{action('CustomersController@edit', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Добавить</a> </div>
+    @foreach($comments as $key => $value)
+      <div>{{ $value->comment }}</div>
+      <div>{{ $value->created_at }}</div>
+     @endforeach
+    <div><a href="{{action('CommentsController@create', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Добавить</a> </div>
   </div>
 </div>
 
