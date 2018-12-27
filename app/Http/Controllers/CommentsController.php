@@ -38,7 +38,7 @@ class CommentsController extends Controller
     public function store(Request $request)
     {
       Comments::create(array_merge($request->except('_token'), ['added_by_user_id' => Auth::id()]));
-      
+
       return redirect()->route('customers.show', ['id' => $request->customer_id]);
     }
 
@@ -59,10 +59,12 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comments $comments)
-    {
-        //
-    }
+     public function edit($customer_id, $id)
+     {
+       $comment = Comments::find($id);
+
+       return view('comments.edit',compact('comment','customer_id'));
+     }
 
     /**
      * Update the specified resource in storage.
@@ -71,9 +73,12 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comments $comments)
+    public function update(Request $request, $customer_id, $id)
     {
-        //
+      //save data into database
+       Comments::find($id)->update(array_merge($request->except('_token'), ['added_by_user_id' => Auth::id()]));
+
+       return redirect()->route('customers.show', ['id' => $customer_id]);
     }
 
     /**
@@ -82,8 +87,10 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comments $comments)
+    public function destroy($customer, $comment)
     {
-        //
+      $comment = Comments::findOrFail($comment);      
+      $comment->delete();
+      return redirect()->back();
     }
 }

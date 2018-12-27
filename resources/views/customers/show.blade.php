@@ -42,6 +42,13 @@
     @foreach($comments as $key => $value)
       <div>{{ $value->comment }}</div>
       <div>{{ $value->created_at }}</div>
+      <div><a href="{{action('CommentsController@edit',[$customer['id'], $value->id])}}" class=" uk-button uk-button-small uk-button-default">Редактировать</a>
+        <form action="{{action('CommentsController@destroy', [$customer['id'], $value->id])}}" method="post">
+          @csrf
+          <input name="_method" type="hidden" value="DELETE">
+          <button class=" uk-button uk-button-small uk-button-danger" type="submit">Удалить</button>
+        </form>
+      </div>
      @endforeach
     <div><a href="{{action('CommentsController@create', $customer['id'])}}" class=" uk-button uk-button-small uk-button-default">Добавить</a> </div>
   </div>
