@@ -45,7 +45,7 @@
   <nav class="uk-navbar uk-navbar-container uk-margin">
     <div class="uk-navbar-left">
         <a uk-toggle="target: #offcanvas-overlay" class="uk-navbar-toggle" href="#">
-            <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+            <span uk-navbar-toggle-icon></span> 
         </a>
     </div>
     <!--<a href="{{ url()->previous() }}" class="btn btn-default">Back</a> -->
