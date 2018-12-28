@@ -18,7 +18,7 @@ class CustomersController extends Controller
       //$customers=$this->customers->with('childrens')->all();
 
     $customers = Customers::with('children')->get();
-    
+
       return view('customers.index', compact('customers'));
     }
 
@@ -41,6 +41,9 @@ class CustomersController extends Controller
     public function store(Request $request)
     {
         //User::create(array_merge($request->all(), ['index' => 'value']));
+        //save data into database
+        $request->merge(['next_date' => date('Y-m-d',strtotime($request->next_date))]);
+        $request->merge(['last_date' => date('Y-m-d',strtotime($request->last_date))]);
 
         Customers::create($request->except('_token'));
         return redirect('customers')->with('success', 'Новый клиент добавлен');
@@ -97,11 +100,11 @@ class CustomersController extends Controller
      */
     public function update(Request $request, $id)
     {
-  //save data into database
-   Customers::find($id)->update($request->all());
-        //Customers::create($request->all());
-
-        //redirect to post index page
+      //convert to right date format
+      $request->merge(['next_date' => date('Y-m-d',strtotime($request->next_date))]);
+      $request->merge(['last_date' => date('Y-m-d',strtotime($request->last_date))]);
+        //save data into database
+        Customers::find($id)->update($request->all());
         return redirect()->route('customers.index')
                         ->with('success','Клиент успешно обновлен');
     }

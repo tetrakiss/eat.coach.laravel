@@ -29,10 +29,10 @@
             <input class="uk-input" type="text" name="vk_link" value="{{$customer->vk_link}}" placeholder="Вконтакте">
         </div>
         <div class="uk-margin">
-            <input class="uk-input" type="text" name="next_date" value="{{$customer->next_date}}" placeholder="Дата сл контакта">
+            <input class="datepicker-here uk-input" data-position="bottom left" type="text" name="next_date" value="{{date('d.m.Y',strtotime($customer->next_date))}}" placeholder="Дата сл контакта">
         </div>
         <div class="uk-margin">
-            <input class="uk-input" type="text" name="last_date" value="{{$customer->last_date}}" placeholder="Дата последнего контакта">
+            <input class="datepicker-here uk-input" data-position="bottom left" type="text" name="last_date" value="{{date('d.m.Y',strtotime($customer->last_date))}}" placeholder="Дата последнего контакта">
         </div>
           <div class="uk-margin">
         <button type="submit" class="uk-button uk-button-default">Обновить</button>

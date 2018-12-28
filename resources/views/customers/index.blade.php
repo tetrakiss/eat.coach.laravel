@@ -24,6 +24,7 @@
 			            <th>Email</th>
 			            <th>Телефон</th>
 			            <th>Skype</th>
+									<th>Соц. сети</th>
 			            <th>Дата сл контакта</th>
 			            <th></th>
 
@@ -41,9 +42,10 @@
 
 									</td>
 			            <td><a href="mailto:{{$customer['email']}}">{{$customer['email']}}</a></td>
-			            <td>{{$customer['phone']}}</td>
+			            <td><a href="tel:+{{$customer['phone']}}">{{$customer['phone']}}</a> </td>
 			            <td><a href="skype:{{$customer['skype']}}?chat">{{$customer['skype']}}</a></td>
-			            <td>{{$customer['next_date']}}</td>
+									<td></td>
+			            <td>{{ date('d.m.Y',strtotime($customer['next_date']))}}</td>
 			            <td><a href="{{action('CustomersController@show', $customer['id'])}}" class="uk-icon-button floatL uk-button-primary" uk-icon="info"></a>
 										<a href="{{action('CustomersController@edit', $customer['id'])}}" class="uk-icon-button floatL uk-button-default" uk-icon="pencil"></a>
 			               <form action="{{action('CustomersController@destroy', $customer['id'])}}" method="post">

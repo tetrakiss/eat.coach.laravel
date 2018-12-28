@@ -15,7 +15,7 @@
             <input class="uk-input" type="text" name="last_name" placeholder="Фамилия">
         </div>
         <div class="uk-margin">
-            <input class="uk-input" type="text" name="birthday" placeholder="День рождения">
+            <input class="datepicker-here uk-input" data-position="bottom left" type="text" name="birthday" placeholder="День рождения">
         </div>
         <div class="uk-margin">
             <textarea class="uk-textarea" name="comment" rows="5" placeholder="Комментарий"></textarea>

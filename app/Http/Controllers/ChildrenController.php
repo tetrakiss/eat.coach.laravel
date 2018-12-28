@@ -37,6 +37,8 @@ class ChildrenController extends Controller
      */
     public function store(Request $request)
     {
+      //convert to right date format
+      $request->merge(['birthday' => date('Y-m-d',strtotime($request->birthday))]);
       Children::create($request->except('_token'));
       //dd($request->all());
       return redirect()->route('customers.show', ['id' => $request->customer_id]);
@@ -76,9 +78,10 @@ class ChildrenController extends Controller
      */
     public function update(Request $request, $customer_id, $id)
     {
+      //convert to right date format
+      $request->merge(['birthday' => date('Y-m-d',strtotime($request->birthday))]);
       //save data into database
        Children::find($id)->update($request->all());
-
        return redirect()->route('customers.show', ['id' => $customer_id]);
     }
 
