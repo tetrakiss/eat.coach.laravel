@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes(['register' => false]);
 
+Route::post('github/deploy', 'DeployController@deploy');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function()
