@@ -14,6 +14,12 @@
     <input class="uk-input" type="text" name="title" placeholder="Заголовок">
 </div>
 <div class="uk-margin">
+        <div uk-form-custom>
+            <input name="title_image"  type="file">
+            <button class="uk-button uk-button-default" type="button" tabindex="-1">Выберите файл для заглавной картинки</button>
+        </div>
+    </div>
+<div class="uk-margin">
 <textarea id="summernote" name="body"></textarea>
 </div>
 
@@ -36,7 +42,7 @@ $(document).ready(function() {
               airMode: false,
               minHeight: 500, // set minimum height of editor
               maxHeight: null, // set maximum height of editor
-              focus: false, // set focus to editable area after initializing summernote
+              focus: true, // set focus to editable area after initializing summernote
               disableDragAndDrop: false,
               /*callbacks: {
                   onImageUpload: function (files) {

@@ -39,6 +39,14 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $post = new Posts();
+       if ($request->hasFile('title_image')) {
+         $cover = $request->file('title_image');
+         $extension = $cover->getClientOriginalExtension();
+         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
+
+         $post->title_image=$cover->getFilename().'.'.$extension;
+       }
 
 	     $message = $request->body;
   	   $dom = new \DomDocument();
@@ -72,14 +80,17 @@ class PostsController extends Controller
 				$img->setAttribute('src', $new_src);
 			} // <!--endif
 		} // <!--endforeach
-
-		Posts::create(
+    $post->title =  $request->title;
+    $post->body = htmlentities(htmlspecialchars($dom->saveHTML()));
+    $post->added_by_user_id =  Auth::id();
+		/*Posts::create(
       [
           'title'=> $request->title,
           'body'=>htmlentities(htmlspecialchars($dom->saveHTML())),
           'added_by_user_id'=> Auth::id()
       ]
-    );
+    );*/
+    $post->save();
     return redirect('posts')->with('success', 'Новый клиент добавлен');
 
     }
