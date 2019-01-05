@@ -34,4 +34,6 @@ Route::group(['middleware' => 'auth'], function()
 
   Route::get("search","CustomersController@search");
 
+  Route::resource('posts', 'PostsController');
+
 });

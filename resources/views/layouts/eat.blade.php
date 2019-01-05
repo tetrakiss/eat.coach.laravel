@@ -40,12 +40,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/eat.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+@yield('custom_head_scr')
 </head>
 <body>
   <nav class="uk-navbar uk-navbar-container uk-margin">
     <div class="uk-navbar-left">
         <a uk-toggle="target: #offcanvas-overlay" class="uk-navbar-toggle" href="#">
-            <span uk-navbar-toggle-icon></span> 
+            <span uk-navbar-toggle-icon></span>
         </a>
     </div>
     <!--<a href="{{ url()->previous() }}" class="btn btn-default">Back</a> -->
@@ -74,6 +76,6 @@
   <div style="padding-left:20px; padding-right:20px;">
       @yield('content')
     </div>
-
+@yield('custom_scr')
 </body>
 </html>
