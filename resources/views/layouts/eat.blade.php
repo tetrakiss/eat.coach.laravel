@@ -61,6 +61,7 @@
         <ul class="uk-list uk-list-divider">
           <li><a href="{{route('customers.index')}}">Все клиенты</a></li>
           <li><a href="{{route('customers.create')}}">Добавить клиента</a></li>
+          <li><a href="{{route('posts.create')}}">Создать пост</a></li>
           <li><a  href="{{ route('logout') }}"
              onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">

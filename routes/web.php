@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Auth::routes(['register' => false]);
 
 Route::post('github/deploy', 'DeployController@deploy');

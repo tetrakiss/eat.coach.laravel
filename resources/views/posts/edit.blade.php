@@ -9,24 +9,31 @@
 @endsection
 
 @section('content')
-{!! Form::open(['route'=>['posts.store'], 'files' => true ]) !!}
+
+{!!  Form::open(['action' => ['PostsController@edit', $id], 'method' => 'PUT', 'files' => true]) !!}
 
 <div class="uk-margin">
-    <input class="uk-input" type="text" name="title" placeholder="Заголовок">
+    <input class="uk-input" type="text" value="{{$post->title}}" name="title" placeholder="Заголовок">
 </div>
 <div class="uk-margin">
+  @isset($post->title_image)
+    <div class="uk-card-media-top">
+      {!! Html::image($post->title_image) !!}
+    </div>
+    @endisset
+    <br>
   <input name="title_image" type="file">
     </div>
     <div class="uk-margin">
-                <textarea name="pre_body" class="uk-textarea" rows="5" placeholder="Превью текста статьи для отображения в категории"></textarea>
+                <textarea name="pre_body" class="uk-textarea" rows="5" placeholder="Превью текста статьи для отображения в категории">{{$post->pre_body}}</textarea>
             </div>
 
 <div class="uk-margin">
-<textarea id="summernote" name="body"></textarea>
+<textarea id="summernote" name="body">{!! html_entity_decode(htmlspecialchars_decode($post->body, ENT_QUOTES | ENT_IGNORE), ENT_QUOTES | ENT_IGNORE, "UTF-8") !!}</textarea>
 </div>
 
 
-{{ Form::submit('Сохранить пост', array('class' => 'btn btn-primary', 'id' => 'form-submit')) }}
+{{ Form::submit('Обновить пост', array('class' => 'btn btn-primary', 'id' => 'form-submit')) }}
 {!! Form::close() !!}
 
 @endsection
