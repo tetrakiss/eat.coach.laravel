@@ -24,9 +24,16 @@ Route::post('github/deploy', 'DeployController@deploy');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::resource('posts', 'PostsController')->only([
+Route::resource('posts', 'PostsController', ['names' => [
+    'index' => 'posts.user.index',
+    'show' =>'posts.user.show'
+]])->only([
     'index', 'show'
 ]);
+
+Route::get('/contacts', function() {
+  return view('common.contacts');
+});
 
 Route::prefix('admin')->group(function(){
 

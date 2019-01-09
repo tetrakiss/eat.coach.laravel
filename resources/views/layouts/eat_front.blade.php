@@ -62,7 +62,7 @@
           <div class="padding-right-header-nav uk-navbar-right" >
 
               <ul class="uk-navbar-nav">
-                  <li><a href="#"><span class="uk-badge nav-contact-button">Контакты</span></a></li>
+                  <li><a href="{{ url('contacts') }}"><span class="uk-badge nav-contact-button">Контакты</span></a></li>
                   <li>
                       <a style="font-size:20px;" href="#"><i class="fas fa-bars"></i></a>
                       <div class="padding-left-header-nav padding-right-header-nav uk-navbar-dropdown uk-navbar-dropdown-width-5">
@@ -75,8 +75,8 @@
                                     <li><a href="#"><h3>Записаться на консультацию</h3></a></li>
                                     <li><a href="#"><h3>Как проходит консультация?</h3></a></li>
                                     <li><a href="#"><h3>Обо мне</h3></a></li>
-                                    <li><a href="#"><h3>Статьи</h3></a></li>
-                                    <li><a href="#"><h3>Контакты</h3></a></li>
+                                    <li><a href="{{route('posts.user.index')}}"><h3>Статьи</h3></a></li>
+                                    <li><a href="{{ url('contacts') }}"><h3>Контакты</h3></a></li>
                                 </ul>
                             </div>
                             <div class="uk-child-width-auto">

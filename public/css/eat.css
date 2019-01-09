@@ -6,6 +6,18 @@
 body, html {
   font-size: 12px!important;
 }
+.uk-link, a {
+  color: #c84033!important;
+}
+ a:hover {
+  color: #8c1813!important;
+}
+.contact-icon {
+  text-align: center;
+  color: #c84033;
+  font-size: 3em;
+  padding-right: 20px;
+}
 
 .white {
   background: #FFF!important;
