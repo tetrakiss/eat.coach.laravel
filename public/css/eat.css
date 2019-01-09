@@ -6,3 +6,44 @@
 body, html {
   font-size: 12px!important;
 }
+
+.white {
+  background: #FFF!important;
+}
+.logo-header-navbar {
+  height: 20px;
+}
+.logo-navbar-dropbar {
+  width: 119px;
+}
+.uk-navbar-dropdown-width-6:not(.uk-navbar-dropdown-stack) {
+  width: 1600px!important;
+}
+.uk-navbar-dropdown {
+  width: 100%;
+  left: 0!important;
+}
+
+@media screen and (max-width: 640px) {
+  .padding-left-header-nav {
+    padding-left: 30px;
+  }
+  .padding-right-header-nav {
+    padding-right: 30px;
+  }
+  .nav-contact-button {
+    display: none;
+  }
+}
+@media screen  and (min-width: 641px) {
+  .nav-contact-button {
+    padding: 5px 16px 4px;
+    background: #c84033!important;
+  }
+  .padding-left-header-nav {
+    padding-left: 70px;
+  }
+  .padding-right-header-nav {
+    padding-right: 70px;
+  }
+}

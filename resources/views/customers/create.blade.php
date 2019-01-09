@@ -2,8 +2,7 @@
 @extends('layouts.eat')
 
 @section('content')
-<form  method="post" action="{{url('customers')}}" >
-        @csrf
+{!! Form::open(['route'=>['customers.store']) !!}
 
         <div class="uk-margin">
             <input class="uk-input" type="text" name="first_name" placeholder="Имя">

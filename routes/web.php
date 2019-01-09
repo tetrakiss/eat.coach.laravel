@@ -23,8 +23,17 @@ Route::post('github/deploy', 'DeployController@deploy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => 'auth'], function()
-{
+
+Route::resource('posts', 'PostsController')->only([
+    'index', 'show'
+]);
+
+Route::prefix('admin')->group(function(){
+
+  Route::middleware(['auth'])->group(function () {
+
+/*Route::group(['middleware' => 'auth'], function()
+{*/
 
   Route::resource('customers', 'CustomersController');
 
@@ -37,5 +46,6 @@ Route::group(['middleware' => 'auth'], function()
   Route::get("search","CustomersController@search");
 
   Route::resource('posts', 'PostsController');
+  });
 
 });

@@ -1,7 +1,7 @@
 @extends('layouts.eat')
 
 @section('content')
-<form method="GET" action="{{ url('search') }}">
+<form method="GET" action="{{ action('CustomersController@search') }}">
 	<div uk-grid class="uk-grid-small">
 <div class="uk-width-expand">
 				<div class="uk-margin">

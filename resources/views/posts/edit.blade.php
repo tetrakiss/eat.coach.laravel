@@ -10,7 +10,7 @@
 
 @section('content')
 
-{!!  Form::open(['action' => ['PostsController@edit', $id], 'method' => 'PUT', 'files' => true]) !!}
+{!!  Form::open(['action' => ['PostsController@update', $id], 'method' => 'PUT', 'files' => true]) !!}
 
 <div class="uk-margin">
     <input class="uk-input" type="text" value="{{$post->title}}" name="title" placeholder="Заголовок">
