@@ -19,7 +19,10 @@
                     <a href="{{action('PostsController@show', $post['id'])}}"><h3 class="uk-card-title">{{$post['title']}}</h3></a>
                       <p class="uk-text-meta uk-margin-remove-top">{{date('d.m.Y',strtotime($post['updated_at']))}}</p>
                     <p>{!! html_entity_decode(htmlspecialchars_decode($post['pre_body'], ENT_QUOTES | ENT_IGNORE), ENT_QUOTES | ENT_IGNORE, "UTF-8") !!}</p>
-                    <p><a href="{{action('PostsController@show', $post['id'])}}"> Подробнее...</a></p>
+                    <p>
+                      <a href="{{action('PostsController@show', $post['id'])}}"> Подробнее...</a>
+
+                    </p>
                 </div>
                   @if($loop->iteration  % 2 == 1)
                   @isset($post['title_image'])

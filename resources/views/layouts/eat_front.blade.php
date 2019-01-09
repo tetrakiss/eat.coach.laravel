@@ -72,9 +72,9 @@
                           </div>
                             <div class="uk-width-expand">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#"><h3>Записаться на консультацию</h3></a></li>
-                                    <li><a href="#"><h3>Как проходит консультация?</h3></a></li>
-                                    <li><a href="#"><h3>Обо мне</h3></a></li>
+                                    <li><a href="{{url('sign_up')}}"><h3>Записаться на консультацию</h3></a></li>
+                                    <li><a href="{{url('how')}}"><h3>Как проходит консультация?</h3></a></li>
+                                    <li><a href="{{url('about')}}"><h3>Обо мне</h3></a></li>
                                     <li><a href="{{route('posts.user.index')}}"><h3>Статьи</h3></a></li>
                                     <li><a href="{{ url('contacts') }}"><h3>Контакты</h3></a></li>
                                 </ul>
