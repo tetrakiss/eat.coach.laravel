@@ -3,7 +3,7 @@
 @section('content')
 <div  uk-grid >
 
-    <div class="uk-align-center uk-width-xlarge">
+    <div class="text-common uk-align-center uk-width-xxlarge">
 
 
 <h2>Немного о себе, для тех, кто меня совсем не знает:</h2>

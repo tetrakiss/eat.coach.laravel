@@ -100,7 +100,7 @@
 
   </div>
 
-  <div style="padding-left:20px; padding-top: 160px; padding-bottom: 100px; padding-right:20px;">
+  <div class="main-container-eat">
       @yield('content')
     </div>
 @yield('custom_scr')
