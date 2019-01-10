@@ -30,8 +30,8 @@ class ContactController extends Controller
      $customerMessage = $request->customerMessage;
    }
 
-   Mail::to('togulev@gmail.com')->send(new ContactUs($name,$email, $phone ,$customerMessage));
-   
+   Mail::to('v.toguleva@gmail.com')->send(new ContactUs($name,$email, $phone ,$customerMessage));
+
    return redirect('thx');
 
  }
@@ -47,7 +47,7 @@ class ContactController extends Controller
    }else{
      $customerMessage = $request->customerMessage;
    }
-   Mail::to('togulev@gmail.com')->send(new ConsultationRequest($name,$email, $phone, $date, $customerMessage));
+   Mail::to('v.toguleva@gmail.com')->send(new ConsultationRequest($name,$email, $phone, $date, $customerMessage));
    return redirect('thx');
  }
 }
