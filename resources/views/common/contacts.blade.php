@@ -14,7 +14,9 @@
     </div>
        <h3 class="uk-text-muted"> либо просто заполните форму обратной связи и я свяжусь с Вами сама.</h3>
       <div>
-        <form>
+
+        <form method="post" action="{{action('ContactController@contactForm')}}">
+          @csrf
     <fieldset class="uk-fieldset">
 
 
@@ -29,7 +31,7 @@
             <input class="uk-input uk-form-large" type="text" name="phone" placeholder="Ваш телефон">
         </div>
         <div class="uk-margin">
-            <textarea class="uk-textarea uk-form-large" rows="5" placeholder="Textarea">Здесь вы можете описать, зачем Вам нужна консультация. Или оставьте это поле пустым.</textarea>
+            <textarea class="uk-textarea uk-form-large"  name="customerMessage" rows="5" placeholder="Textarea">Здесь вы можете описать, зачем Вам нужна консультация. Или оставьте это поле пустым.</textarea>
         </div>
         <div class="uk-margin">
       <button type="submit" class="uk-button uk-button-default">Отправить</button>

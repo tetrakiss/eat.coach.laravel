@@ -14,7 +14,10 @@
     </div>
        <h3 class="uk-text-muted"> либо просто заполните форму обратной связи и я свяжусь с Вами сама.</h3>
       <div>
-        <form>
+        <form method="post" action="{{action('ContactController@consultationRequest')}}">
+          @csrf
+
+
     <fieldset class="uk-fieldset">
 
 
@@ -32,7 +35,7 @@
             <input class="datepicker-here uk-input" data-position="bottom left" type="text" name="date" placeholder="Удобная дата консультации">
         </div>
         <div class="uk-margin">
-            <textarea class="uk-textarea uk-form-large" rows="5" placeholder="Textarea">Здесь вы можете описать, зачем Вам нужна консультация. Или оставьте это поле пустым.</textarea>
+            <textarea class="uk-textarea uk-form-large" name="customerMessage" rows="5" placeholder="Textarea">Здесь вы можете описать, зачем Вам нужна консультация. Или оставьте это поле пустым.</textarea>
         </div>
         <div class="uk-margin">
       <button type="submit" class="uk-button uk-button-default">Записаться</button>

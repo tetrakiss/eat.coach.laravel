@@ -67,8 +67,8 @@ Route::get('/sign_up', function() {
   return view('common.signup');
 });
 
-
-
+Route::post("/contacts","ContactController@contactForm");
+Route::post("/sign_up","ContactController@consultationRequest");
 
 /*
 |--------------------------------------------------------------------------
