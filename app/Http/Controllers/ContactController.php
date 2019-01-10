@@ -31,6 +31,8 @@ class ContactController extends Controller
    }
 
    Mail::to('togulev@gmail.com')->send(new ContactUs($name,$email, $phone ,$customerMessage));
+   
+   return redirect('thx');
 
  }
  public function consultationRequest(Request $request)
@@ -46,6 +48,6 @@ class ContactController extends Controller
      $customerMessage = $request->customerMessage;
    }
    Mail::to('togulev@gmail.com')->send(new ConsultationRequest($name,$email, $phone, $date, $customerMessage));
-
+   return redirect('thx');
  }
 }
