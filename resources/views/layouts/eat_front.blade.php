@@ -52,7 +52,7 @@
           <div class="padding-left-header-nav uk-navbar-left">
 
               <ul class="uk-navbar-nav">
-                {!! Html::image(asset('images/eat-coach-red-logo.svg'), 'eat.coach', ['class' => 'logo-header-navbar']) !!}
+                <a href="{{URL::to('/')}}">{!! Html::image(asset('images/eat-coach-red-logo.svg'), 'eat.coach', ['class' => 'logo-header-navbar']) !!}</a>
 
 
               </ul>

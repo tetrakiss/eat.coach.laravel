@@ -12,10 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  if(!Auth::check()) {
+    return redirect('posts');
+  }else {
+    return redirect('admin/customers');
+  }
 });
-Route::get('/home', 'HomeController@index')->name('home');
-
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+  if(!Auth::check()) {
+    return redirect('posts');
+  }else {
+    return redirect('admin/customers');
+  }
+});
 
 Auth::routes(['register' => false]);
 

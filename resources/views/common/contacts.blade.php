@@ -4,7 +4,7 @@
 <div  uk-grid >
 
     <div class="uk-align-center uk-width-xlarge">
-      <h1>Привет, меня зовут <a href="https://www.facebook.com/valentina.toguleva" target="_blank">Валентина</a>, Вы можете связаться со мной любым удобным способом указанным ниже,</h1>
+      <h1>👋 Привет, меня зовут <a href="https://www.facebook.com/valentina.toguleva" target="_blank">Валентина</a>, Вы можете связаться со мной любым удобным способом указанным ниже</h1>
       <div style="display: flex;align-items: center;justify-content: center;">
       <a class="contact-icon" target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i></a>
       <a class="contact-icon" target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i></a>
