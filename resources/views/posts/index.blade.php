@@ -1,7 +1,9 @@
 
 @extends(Auth::user() ? 'layouts.eat' : 'layouts.eat_front')
-
-
+@section('seo_tags')
+{!! SEOMeta::generate() !!}
+{!! OpenGraph::generate() !!}
+@endsection
 @section('content')
 
 <div class="uk-grid-match uk-child-width-1-2@m" uk-grid>

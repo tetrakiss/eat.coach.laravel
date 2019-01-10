@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\File;
 use App\Customers;
 use App\Posts;
 use Image;
+use URL;
+
+use SEOMeta;
+use OpenGraph;
+
 
 
 class PostsController extends Controller
@@ -20,6 +25,16 @@ class PostsController extends Controller
      */
     public function index()
     {
+        SEOMeta::setTitle('Eat.coach Статьи');
+        SEOMeta::setDescription('Статьи по коррекции пищевого поведения у детей и взрослых');
+
+        OpenGraph::setDescription('Статьи по коррекции пищевого поведения у детей и взрослых');
+        OpenGraph::setTitle('Eat.coach Статьи');
+        OpenGraph::addProperty('locale', 'ru-ru');
+        OpenGraph::setUrl(URL::current());
+        //OpenGraph::addImage($post->cover->url);
+        OpenGraph::addProperty('type', 'articles');
+
       $posts = Posts::with('author')->latest()->get();
 
         return view('posts.index', compact('posts'));
@@ -57,12 +72,12 @@ class PostsController extends Controller
 
 
          $image = $request->file('title_image');
-         $path = public_path(). '/uploads/';
+         $path = public_path(). '/uploads/posts/';
          $filename = $image->getClientOriginalName();
          //$filename = $image->getClientOriginalName() . '.' . $image->getClientOriginalExtension();
          $image->move($path, $filename);
 
-         $post->title_image='/uploads/'. $image->getClientOriginalName();
+         $post->title_image='/uploads/posts/'. $image->getClientOriginalName();
 
        }
 
@@ -87,7 +102,7 @@ class PostsController extends Controller
 
 				// Generating a random filename
 				$filename = uniqid();
-				$filepath = "/uploads/$filename.$mimetype";
+				$filepath = "/uploads/posts/$filename.$mimetype";
 
 				// @see http://image.intervention.io/api/
 				$image = Image::make($src)
@@ -107,7 +122,7 @@ class PostsController extends Controller
     $post->added_by_user_id =  Auth::id();
 
     $post->save();
-    return redirect('posts')->with('success', 'Новый клиент добавлен');
+    return redirect('posts')->with('success', 'Новый пост добавлен');
 
     }
 
@@ -119,7 +134,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-      $post = Posts::findOrFail($id);    
+      $post = Posts::findOrFail($id);
+      SEOMeta::setTitle($post->title);
+      OpenGraph::addImage($post->title_image);
       return view('posts.show')
             ->with('post', $post);
     }
@@ -150,10 +167,10 @@ class PostsController extends Controller
 
       if ($request->hasFile('title_image')) {
         $image = $request->file('title_image');
-        $path = public_path(). '/uploads/';
+        $path = public_path(). '/uploads/posts/';
         $filename = $image->getClientOriginalName();
         $image->move($path, $filename);
-        $post->title_image='/uploads/'. $image->getClientOriginalName();
+        $post->title_image='/uploads/posts/'. $image->getClientOriginalName();
       }
 
       $message = $request->body;
@@ -177,7 +194,7 @@ class PostsController extends Controller
 
        // Generating a random filename
        $filename = uniqid();
-       $filepath = "/uploads/$filename.$mimetype";
+       $filepath = "/uploads/posts/$filename.$mimetype";
 
        // @see http://image.intervention.io/api/
        $image = Image::make($src)

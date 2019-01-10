@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+@yield('seo_tags')
     <meta name="yandex-verification" content="37713199f6e40b5c" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favico/apple-icon-57x57.png') }}">
@@ -72,6 +73,7 @@
                           </div>
                             <div class="uk-width-expand">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
+
                                     <li><a href="{{url('sign_up')}}"><h3>Записаться на консультацию</h3></a></li>
                                     <li><a href="{{url('how')}}"><h3>Как проходит консультация?</h3></a></li>
                                     <li><a href="{{url('about')}}"><h3>Обо мне</h3></a></li>
