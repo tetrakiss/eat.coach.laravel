@@ -137,6 +137,10 @@ class PostsController extends Controller
       $post = Posts::findOrFail($id);
       SEOMeta::setTitle($post->title);
       OpenGraph::addImage($post->title_image);
+      OpenGraph::setDescription($post->pre_body);
+      OpenGraph::addProperty('locale', 'ru-ru');
+      OpenGraph::setUrl(URL::current());
+      OpenGraph::addProperty('type', 'articles');
       return view('posts.show')
             ->with('post', $post);
     }

@@ -34,7 +34,15 @@
                     <p>{!! html_entity_decode(htmlspecialchars_decode($post['pre_body'], ENT_QUOTES | ENT_IGNORE), ENT_QUOTES | ENT_IGNORE, "UTF-8") !!}</p>
                     <p>
                       @auth
-                        <a href="{{action('PostsController@show', $post['id'])}}"> Подробнее...</a>
+
+                      <a href="{{action('PostsController@show', $post['id'])}}" class="uk-icon-button floatL uk-button-primary" uk-icon="info"></a>
+    										<a href="{{action('PostsController@edit', $post['id'])}}" class="uk-icon-button floatL uk-button-default" uk-icon="pencil"></a>
+    			               <form action="{{action('PostsController@destroy', $post['id'])}}" method="post">
+    			                 @csrf
+    			                 <input name="_method" type="hidden" value="DELETE">
+    			                 <button uk-icon="close" class="uk-icon-button floatL  uk-button-danger" type="submit"></button>
+    			               </form>
+                        
                      @endauth
                      @guest
                          <a href="{{route('posts.user.show', $post['id'])}}"> Подробнее...</a>
