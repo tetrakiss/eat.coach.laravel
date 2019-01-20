@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        \URL::forceScheme('https');
     }
 
     /**
@@ -26,3 +27,5 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 }
+
+certbot certonly --webroot -w /var/www/eat.coach.laravel/public -d eat.coach
