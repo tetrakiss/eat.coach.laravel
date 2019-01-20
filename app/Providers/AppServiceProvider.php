@@ -27,5 +27,3 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 }
-
-certbot certonly --webroot -w /var/www/eat.coach.laravel/public -d eat.coach
