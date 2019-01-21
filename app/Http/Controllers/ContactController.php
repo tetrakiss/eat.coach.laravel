@@ -7,6 +7,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactUs;
 use App\Mail\ConsultationRequest;
+use App\Http\Requests\FeedbackRequest;
 
 //use App\Notifications\InboxMessage;
 //use App\Http\Requests\ContactFormRequest;
@@ -18,7 +19,7 @@ class ContactController extends Controller
   *
   * @return \Illuminate\Http\Response
   */
- public function contactForm(Request $request)
+ public function contactForm(FeedbackRequest $request)
  {
 
    $name = $request->name;
@@ -35,7 +36,7 @@ class ContactController extends Controller
    return redirect('thx');
 
  }
- public function consultationRequest(Request $request)
+ public function consultationRequest(FeedbackRequest $request)
  {
 
    $name = $request->name;
