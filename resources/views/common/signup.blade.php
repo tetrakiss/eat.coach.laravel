@@ -33,13 +33,13 @@
 
 
         <div class="uk-margin">
-            <input class="uk-input uk-form-large" type="text" name="name" placeholder="Как Вас зовут?">
+            <input class="uk-input uk-form-large" type="text" name="name"  value="{{ old('name') }}" placeholder="Как Вас зовут?">
         </div>
         <div class="uk-margin">
-            <input class="uk-input uk-form-large" type="email" name="email" placeholder="Ваш email">
+            <input class="uk-input uk-form-large" type="email" name="email" value="{{ old('email') }}" placeholder="Ваш email">
         </div>
         <div class="uk-margin">
-            <input class="uk-input uk-form-large" type="text" name="phone" placeholder="Ваш телефон">
+            <input class="uk-input uk-form-large" type="text" name="phone" value="{{ old('phone') }}" placeholder="Ваш телефон">
         </div>
         <div class="uk-margin">
             <input class="datepicker-here uk-input" data-position="bottom left" type="text" name="date" placeholder="Удобная дата консультации">
