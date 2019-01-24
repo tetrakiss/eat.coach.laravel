@@ -46,7 +46,7 @@ class CustomersController extends Controller
         $request->merge(['last_date' => date('Y-m-d',strtotime($request->last_date))]);
 
         Customers::create($request->except('_token'));
-        return redirect('customers')->with('success', 'Новый клиент добавлен');
+        return redirect('admin/customers')->with('success', 'Новый клиент добавлен');
     }
 
     /**
