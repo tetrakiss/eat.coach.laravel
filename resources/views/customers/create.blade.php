@@ -2,7 +2,7 @@
 @extends('layouts.eat')
 
 @section('content')
-{!! Form::open(['route'=>['customers.store']) !!}
+{!! Form::open(['route'=>['customers.store']]) !!}
 
         <div class="uk-margin">
             <input class="uk-input" type="text" name="first_name" placeholder="Имя">
