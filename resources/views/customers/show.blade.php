@@ -110,6 +110,7 @@
                     <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
                       <div class="uk-width-auto">
                         <h4>{{ $value->med }}</h4>
+
                       </div>
                         <div class="uk-width-expand">
                             <ul class="uk-comment-meta uk-subnav uk-subnav-divider ">
@@ -128,6 +129,7 @@
                         </div>
                     </header>
                     <div class="uk-comment-body">
+                        <h6>Принимает <b>{{ $value->children }}</b></h6>
                         <p class="">{{ $value->medication }}</p>
                     </div>
                   </article>

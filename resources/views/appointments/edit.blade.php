@@ -8,7 +8,17 @@
   @csrf
   <input name="_method" type="hidden" value="PATCH">
   <input  type="hidden" name="customer_id" value="{{$customer_id}}">
-
+  <div class="uk-margin">
+      <select name="children_id" class="uk-select">
+        @foreach ($childrenList as $children)
+          <option
+          @isset($children['selected'])
+            selected
+        @endisset
+        value="{{$children['id']}}" >{{$children['name']}}</option>
+        @endforeach
+      </select>
+  </div>
   <div class="uk-margin">
       <input class="uk-input" type="text" name="med" value="{{$appointment->med}}" placeholder="Название препарата">
   </div>

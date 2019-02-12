@@ -14,4 +14,14 @@ class Children extends Model
   protected $table = 'children';
 
   protected $guarded = [];
+
+  /**
+   * Customer может иметь множество назначений.
+   *
+   * @return \Illuminate\Database\Eloquent\Relations\HasMany
+   */
+    public function appointments()
+    {
+        return $this->hasMany(Appointments::class, 'children_id');
+    }
 }

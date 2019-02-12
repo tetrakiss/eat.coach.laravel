@@ -7,7 +7,13 @@
 
 
         <input  type="hidden" name="customer_id" value="{{$customer->id}}">
-
+        <div class="uk-margin">
+            <select name="children_id" class="uk-select">
+              @foreach ($customer->children as $children)
+                <option value="{{$children->id}}" >{{$children->first_name}}</option>
+              @endforeach
+            </select>
+        </div>
         <div class="uk-margin">
             <input class="uk-input" type="text" name="med" placeholder="Название препарата">
         </div>

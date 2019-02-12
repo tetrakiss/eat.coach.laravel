@@ -14,4 +14,12 @@ class Appointments extends Model
   protected $table = 'appointments';
 
   protected $guarded = [];
+
+  /**
+    * Get the Children that owns the appointment.
+    */
+   public function children()
+   {
+       return $this->belongsTo('App\Children');
+   }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Customers;
 use App\Children;
+use App\Appointments;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
@@ -70,7 +71,20 @@ class CustomersController extends Controller
       $customer = Customers::findOrFail($id);
       $children = $customer->children;
       $comments = $customer->comments;
+      //$allcustomer = Customers::with('children')->with('ChildrenAppointments')->where('id',$id)->first();
+      //dd($allcustomer);
       $appointments = $customer->appointments;
+      $appointments->map(function ($appointment) {
+        $a = Appointments::with('children')->where('id', $appointment->id)->first();
+        if(isset($a->children)){
+          $appointment->children = $a->children->first_name.' '.$a->children->last_name;
+        }else {
+          $appointment->children ='';
+        }
+
+        return $appointment;
+    });
+      //dd($appointments);
       return view('customers.show')
             ->with('customer', $customer)
             ->with('children', $children)

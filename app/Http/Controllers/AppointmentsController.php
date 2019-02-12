@@ -26,6 +26,8 @@ class AppointmentsController extends Controller
      */
     public function create(Customers $customer)
     {
+      $customer = Customers::with('children')->where('id',$customer->id)->first();
+      //dd($children);
         return view('appointments.create')->with('customer', $customer);
     }
 
@@ -61,9 +63,20 @@ class AppointmentsController extends Controller
      */
      public function edit($customer_id, $id)
      {
-       $appointment = Appointments::find($id);
+       $appointment = Appointments::with('children')->where('id',$id)->first();
 
-       return view('appointments.edit',compact('appointment','customer_id'));
+
+       $customer = Customers::with('children')->where('id',$customer_id)->first();
+       $children=$customer->children;
+       foreach ($children as $c) {
+         $childrenList[$c->id]=['id'=>$c->id, 'name'=>$c->first_name.' '.$c->last_name ];
+       }
+       if(isset($appointment->children)){
+         $childrenList[$appointment->children->id]=['id'=>$appointment->children->id, 'selected'=>true, 'name'=>$appointment->children->first_name.' '.$appointment->children->last_name ];
+       }
+
+
+       return view('appointments.edit',compact('appointment','customer_id','childrenList'))->with('childrenList', $childrenList);
      }
 
     /**

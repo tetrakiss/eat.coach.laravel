@@ -99,6 +99,21 @@ class Customers extends Model
         }
 
         /**
+        * Get all of the posts for the country.
+        */
+       public function ChildrenAppointments()
+       {
+           return $this->hasManyThrough(
+             Appointments::class,
+             Children::class,
+             'customer_id',
+             'children_id',
+             'id',
+             'id'
+           );
+       }
+
+        /**
          * Add a appointment to customer.
          *
          * @param  array $reply
