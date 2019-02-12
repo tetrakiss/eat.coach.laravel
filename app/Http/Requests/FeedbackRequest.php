@@ -14,7 +14,7 @@ class FeedbackRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -36,7 +36,7 @@ class FeedbackRequest extends FormRequest
     {
         return [
 
-            'phone.required_without' => 'Если Вы не укзали email то укажите телефон для связи',            
+            'phone.required_without' => 'Если Вы не укзали email то укажите телефон для связи',
             'name.required' => 'Вы не  указали как Вас зовут!',
             'g-recaptcha-response.required' => 'Мы должны удостоверится что вы не робот!'
         ];
