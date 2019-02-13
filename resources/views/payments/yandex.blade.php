@@ -1,4 +1,4 @@
-@extends('layouts.eat_front'))
+@extends('layouts.eat_front')
 
 @section('seo_tags')
 {!! SEOMeta::generate() !!}
