@@ -75,7 +75,9 @@ Route::resource('posts', 'PostsController', ['names' => [
 |--------------------------------------------------------------------------
 |
 */
-
+Route::get('/story', function() {
+  return view('common.story');
+});
 Route::get('/contacts', function() {
   return view('common.contacts');
 });

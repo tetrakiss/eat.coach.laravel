@@ -65,6 +65,7 @@
                                   <li><a href="{{url('how')}}"><h3>Как проходит консультация?</h3></a></li>
                                   <li><a href="{{ url('pay') }}"><h3>Оплата</h3></a></li>
                                   <li><a href="{{url('about')}}"><h3>Обо мне</h3></a></li>
+                                  <li><a href="{{url('story')}}"><h3>Моя "история"</h3></a></li>
                                   <li><a href="{{route('posts.user.index')}}"><h3>Статьи</h3></a></li>
                                   <li><a href="{{ url('contacts') }}"><h3>Контакты</h3></a></li>
 
