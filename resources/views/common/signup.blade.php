@@ -14,7 +14,7 @@
       </div>
     @endforeach
           @endif
-      <h1>👋 Привет, меня зовут <a href="https://www.facebook.com/valentina.toguleva" target="_blank">Валентина</a>, Вы можете <b>записаться</b> ко мне на коснультацию любым удобным способом указанным ниже,</h1>
+      <h1>👋 Привет, меня зовут <a href="https://www.facebook.com/valentina.toguleva" target="_blank">Валентина</a>,<br> Вы можете <b>записаться</b> ко мне на консультацию любым удобным способом указанным ниже,</h1>
       <div style="display: flex;align-items: center;justify-content: center;">
       <a class="contact-icon" target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i></a>
       <a class="contact-icon" target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i></a>
