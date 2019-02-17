@@ -79,17 +79,17 @@ class YandexController extends Controller
     }
 
     public function callback(Request $request){
-    print_r(json_decode(file_get_contents("php://input")));
-    print_r($request->all());
-    /*$yandex_id= $request->object->id;
-    $status =  $request->object->status;
-    $amout = $request->object->amount->value;
+    $rawData=json_decode(file_get_contents("php://input"));
+    //print_r($request->all());
+    $yandex_id= $rawData->object->id;
+    $status =  $rawData->object->status;
+    $amout = $rawData->object->amount->value;
     $consultation_payment= DB::table('consultation_payment')->where('yandex_id',$yandex_id)->first();
     if(!empty($consultation_payment)){
       DB::table('consultation_payment')
             ->where('yandex_id', $yandex_id)
             ->update(['status' => $status,'updated_at' => now()]);
-    }*/
+    }
     //Storage::disk('local')->put('yandexCallback.log', print_r(json_decode(file_get_contents("php://input")), true));
 
     }
