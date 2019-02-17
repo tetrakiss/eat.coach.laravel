@@ -76,7 +76,7 @@ Route::resource('posts', 'PostsController', ['names' => [
 */
 
 Route::prefix('catalog')->group(function(){
-  Route::get("/consultation","YandexController@consultation");
+  Route::get("/consultation","YandexController@consultation")->name('catalog.consultation');
 });
 /*
 |--------------------------------------------------------------------------
@@ -98,6 +98,9 @@ Route::name('yandex.')->prefix('yandex')->group(function(){
 |--------------------------------------------------------------------------
 |
 */
+Route::get('/loyal', function() {
+  return view('common.loyal-big');
+});
 Route::get('/story', function() {
   return view('common.story');
 });
