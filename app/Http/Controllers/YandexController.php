@@ -34,7 +34,7 @@ class YandexController extends Controller
           $idempotenceKey
       );*/
 
-      $client->createPayment(
+    $response = $client->createPayment(
         array(
             "amount" => array(
                 "value" => "4000.00",
