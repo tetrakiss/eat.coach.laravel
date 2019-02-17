@@ -18,7 +18,8 @@
         "laravelcollective/html": "^5.7",
         "nicolaslopezj/searchable": "^1.10",
         "simplesoftwareio/simple-qrcode": "^2.0",
-        "symfony/process": "^4.2"
+        "symfony/process": "^4.2",
+        "yandex-money/yandex-checkout-sdk-php": "^1.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

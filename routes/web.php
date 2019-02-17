@@ -67,7 +67,16 @@ Route::resource('posts', 'PostsController', ['names' => [
 ]])->only([
     'index', 'show'
 ]);
-
+/*
+|--------------------------------------------------------------------------
+| Yandex Kassa
+|--------------------------------------------------------------------------
+|
+*/
+Route::prefix('yandex')->group(function(){
+  Route::post("/callback","YandexController@callback");
+  Route::get("/create","YandexController@create");
+});
 
 /*
 |--------------------------------------------------------------------------
