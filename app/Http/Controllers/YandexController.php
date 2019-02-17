@@ -70,6 +70,7 @@ class YandexController extends Controller
 
       $paymentId = session('pay_id');
       $client = new Client();
+      $client->setAuth(env('YANDEX_KASSA_SHOPID'), env('YANDEX_KASSA_SECRET'));
       $payment = $client->getPaymentInfo($paymentId);
       session()->forget('pay_id');
       dd($payment);
