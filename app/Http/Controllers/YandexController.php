@@ -31,8 +31,8 @@ class YandexController extends Controller
           ),
           $idempotenceKey
       );
-
-      dd($response);
+      redirect($response->confirmation->confirmationUrl);
+      //dd($response);
     }
 
     public function callback(Request $request){
