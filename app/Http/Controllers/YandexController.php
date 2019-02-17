@@ -67,7 +67,9 @@ class YandexController extends Controller
            'phone' => $request->phone,
            'description' => 'Оплата консультации '.$request->first_name.' '.$request->last_name,
            'amount' => $consultation->price,
-           'status' => 'waiting_for_capture'
+           'status' => 'waiting_for_capture',
+           'created_at' => now(),
+           'updated_at' => now()
           ]
       );
     //редирект на платежный шлюз
@@ -96,7 +98,9 @@ class YandexController extends Controller
       if(!empty($consultation_payment)){
       DB::table('consultation_payment')
             ->where('yandex_id', $paymentId)
-            ->update(['status' => $payment->status]);
+            ->update(['status' => $payment->status,
+                      'updated_at' => now()
+                    ]);
         if($payment->status =='succeeded'){
             echo "Платеж оплачен!";
         }else {
