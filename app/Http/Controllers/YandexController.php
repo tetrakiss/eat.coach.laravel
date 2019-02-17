@@ -79,14 +79,18 @@ class YandexController extends Controller
     }
 
     public function callback(Request $request){
-    Log::info('Get data from Kassa');
-    $req_dump=$request->all();
-    Storage::disk('local')->put('yandexCallback.log', print_r(json_decode(file_get_contents("php://input")), true));
-    //file_put_contents (Storage::url('public/ya.log'), print_r(json_decode(file_get_contents("php://input")), true));
-  //  Log::info($req_dump);
-    /*  $fp = fopen('request.log', 'a');
-      fwrite($fp, $req_dump);
-      fclose($fp);*/
+
+    $yandex_id= $request->object->id;
+    $status =  $request->object->status;
+    $amout = $request->object->amount->value;
+    $consultation_payment= DB::table('consultation_payment')->where('yandex_id',$yandex_id)->first();
+    if(!empty($consultation_payment)){
+      DB::table('consultation_payment')
+            ->where('yandex_id', $yandex_id)
+            ->update(['status' => $status,'updated_at' => now()]);
+    }
+    //Storage::disk('local')->put('yandexCallback.log', print_r(json_decode(file_get_contents("php://input")), true));
+
     }
     public function success () {
 
@@ -98,11 +102,12 @@ class YandexController extends Controller
       $payment = $client->getPaymentInfo($paymentId);
       session()->forget('pay_id');
       if(!empty($consultation_payment)){
-      DB::table('consultation_payment')
-            ->where('yandex_id', $paymentId)
-            ->update(['status' => $payment->status,
-                      'updated_at' => now()
-                    ]);
+        if($consultation_payment->status != 'succeeded'){
+          DB::table('consultation_payment')
+                ->where('yandex_id', $paymentId)
+                ->update(['status' => $payment->status,'updated_at' => now()]);
+        }
+
         if($payment->status =='succeeded'){
             return view('payments.success');
         }else {
