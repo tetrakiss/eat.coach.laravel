@@ -45,7 +45,7 @@
 
           </div>
           <div class="uk-card-footer">
-                <a href="{{route('yandex.create', ['type' => 1])}}" class="uk-button uk-button-text">Оплатить</a>
+                <a href="{{route('yandex.create', ['type' => 2])}}" class="uk-button uk-button-text">Оплатить</a>
           </div>
       </div>
     </div>
