@@ -31,6 +31,8 @@ class YandexController extends Controller
           ),
           $idempotenceKey
       );
+
+      dd($response);
     }
 
     public function callback(Request $request){
