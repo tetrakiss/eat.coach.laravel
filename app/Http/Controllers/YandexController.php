@@ -40,6 +40,8 @@ class YandexController extends Controller
                 "value" => "4000.00",
                 "currency" => "RUB"
             ),
+            'capture' => true,
+            'description' => 'Оплата консультации Иванов Иван',
             "confirmation" => array(
                 "type" => "redirect",
                 "return_url" => "https://eat.coach/yandex/success"
@@ -63,7 +65,7 @@ class YandexController extends Controller
                 )
             )
         ),
-        uniqid('', true)
+        $idempotenceKey
     );
     //редирект на платежный шлюз
       return redirect($response->confirmation->confirmationUrl);
