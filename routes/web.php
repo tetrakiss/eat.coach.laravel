@@ -74,6 +74,7 @@ Route::resource('posts', 'PostsController', ['names' => [
 |
 */
 Route::name('yandex.')->prefix('yandex')->group(function(){
+  Route::get("/callback","YandexController@callback")->name('callback');
   Route::post("/callback","YandexController@callback")->name('callback');
   Route::get("/create","YandexController@create")->name('create');
   Route::get("/success","YandexController@success")->name('success');
