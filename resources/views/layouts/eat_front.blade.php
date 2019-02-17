@@ -119,7 +119,13 @@
 ИНН 502712853694</div>
     </div>
     <div>
-        <div class="uk-align-right uk-background-muted uk-padding">eat.coach © {{date('Y')}}</div>
+        <div class="uk-align-right uk-background-muted uk-padding">
+          <ul class="uk-subnav" uk-margin>
+    <li><a href="{{url('loyal')}}">пользовательское соглашение</a></li>
+    <li><span>eat.coach © {{date('Y')}}</span></li>
+</ul>
+
+          </div>
     </div>
 
 </div>

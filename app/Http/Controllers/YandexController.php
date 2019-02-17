@@ -7,6 +7,7 @@ use YandexCheckout\Client;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Cookie;
 use DB;
+use Illuminate\Support\Facades\Storage;
 class YandexController extends Controller
 {
 
@@ -80,8 +81,9 @@ class YandexController extends Controller
     public function callback(Request $request){
     Log::info('Get data from Kassa');
     $req_dump=$request->all();
-
-    Log::info($req_dump);
+    Storage::disk('local')->put('yandexCallback.log', print_r(json_decode(file_get_contents("php://input")), true));
+    //file_put_contents (Storage::url('public/ya.log'), print_r(json_decode(file_get_contents("php://input")), true));
+  //  Log::info($req_dump);
     /*  $fp = fopen('request.log', 'a');
       fwrite($fp, $req_dump);
       fclose($fp);*/
