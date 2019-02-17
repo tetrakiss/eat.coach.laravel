@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use YandexCheckout\Client;
 use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class YandexController extends Controller
 {
 
     public function create () {
       $idempotenceKey = uniqid('', true);
+      $minutes=60;
+      cookie('pay_id', $idempotenceKey, $minutes);
+
       $client = new Client();
       $client->setAuth(env('YANDEX_KASSA_SHOPID'), env('YANDEX_KASSA_SECRET'));
 
@@ -48,7 +52,7 @@ class YandexController extends Controller
             ),
             "receipt" => array(
 
-                "phone" => "79000000000",
+                "email" => "togulev@gmail.com",
                 "items" => array(
                   array(
                       "description" => "Консультация",
@@ -82,6 +86,12 @@ class YandexController extends Controller
       fclose($fp);*/
     }
     public function success () {
+
+      $paymentId = Cookie::get('pay_id');
+      $client = new Client();
+      $payment = $client->getPaymentInfo($paymentId);
+      Cookie::forget('pay_id');
+      dd($payment);
       echo "Платеж оплачен!";
     }
 }
