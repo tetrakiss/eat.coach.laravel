@@ -79,7 +79,7 @@ class YandexController extends Controller
     }
 
     public function callback(Request $request){
-    print_r(json_decode(file_get_contents("php://input"));
+    print_r(json_decode(file_get_contents("php://input")));
     print_r($request->all());
     /*$yandex_id= $request->object->id;
     $status =  $request->object->status;
