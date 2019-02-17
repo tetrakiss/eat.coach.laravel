@@ -31,7 +31,11 @@ class YandexController extends Controller
           ),
           $idempotenceKey
       );
-      redirect($response->confirmation->confirmationUrl);
+      $redirect =  $response->confirmation->confirmation_url;
+      echo $redirect;
+      $RedirectURL = $response->confirmation->confirmationUrl;
+      echo $RedirectURL;
+      return redirect($response->confirmation->confirmationUrl);
       //dd($response);
     }
 
