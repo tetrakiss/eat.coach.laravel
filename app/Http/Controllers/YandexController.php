@@ -12,8 +12,8 @@ class YandexController extends Controller
 
     public function create () {
       $idempotenceKey = uniqid('', true);
-      $minutes=60;
-      cookie('pay_id', $idempotenceKey, $minutes);
+      session(['pay_id' => $idempotenceKey]);
+
 
       $client = new Client();
       $client->setAuth(env('YANDEX_KASSA_SHOPID'), env('YANDEX_KASSA_SECRET'));
@@ -87,10 +87,10 @@ class YandexController extends Controller
     }
     public function success () {
 
-      $paymentId = Cookie::get('pay_id');
+      $paymentId = session('pay_id');
       $client = new Client();
       $payment = $client->getPaymentInfo($paymentId);
-      Cookie::forget('pay_id');
+      session()->forget('pay_id');
       dd($payment);
       echo "Платеж оплачен!";
     }
