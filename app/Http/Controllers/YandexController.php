@@ -79,7 +79,7 @@ class YandexController extends Controller
     }
 
     public function callback(Request $request){
-      dd($request);
+    print_r($request->all());
     $yandex_id= $request->object->id;
     $status =  $request->object->status;
     $amout = $request->object->amount->value;
