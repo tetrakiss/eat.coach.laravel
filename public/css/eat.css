@@ -12,6 +12,9 @@ body, html {
  a:hover {
   color: #8c1813!important;
 }
+.uk-label {
+  background-color: #c84033!important
+}
 .contact-icon {
   text-align: center;
   color: #c84033;

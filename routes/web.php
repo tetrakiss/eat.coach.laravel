@@ -67,6 +67,17 @@ Route::resource('posts', 'PostsController', ['names' => [
 ]])->only([
     'index', 'show'
 ]);
+
+/*
+|--------------------------------------------------------------------------
+| Admin page Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::prefix('catalog')->group(function(){
+  Route::get("/consultation","YandexController@consultation");
+});
 /*
 |--------------------------------------------------------------------------
 | Yandex Kassa
@@ -76,7 +87,8 @@ Route::resource('posts', 'PostsController', ['names' => [
 Route::name('yandex.')->prefix('yandex')->group(function(){
   Route::get("/callback","YandexController@callback")->name('callback');
   Route::post("/callback","YandexController@callback")->name('callback');
-  Route::get("/create","YandexController@create")->name('create');
+  Route::get("/create/{type}","YandexController@create")->name('create');
+  Route::post("/store","YandexController@store")->name('store');
   Route::get("/success","YandexController@success")->name('success');
 });
 
