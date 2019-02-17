@@ -102,13 +102,13 @@ class YandexController extends Controller
                       'updated_at' => now()
                     ]);
         if($payment->status =='succeeded'){
-            echo "Платеж оплачен!";
+            return view('payments.success');
         }else {
-            echo "Платеж не оплачен!";
+              return view('payments.fail')->with('fail',$payment->status );
         }
       }else {
 
-          echo "Что то пошло нетак!";
+        return view('payments.fail')->with('fail',$payment->status );
       }
 
       //dd($payment);
