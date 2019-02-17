@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use YandexCheckout\Client;
+use Illuminate\Support\Facades\Log;
 
 class YandexController extends Controller
 {
@@ -25,21 +26,27 @@ class YandexController extends Controller
               ),
               'confirmation' => array(
                   'type' => 'redirect',
-                  'return_url' => env('YANDEX_KASSA_CALLBACK'),
+                  'return_url' => 'https://eat.coach/yandex/success',
               ),
               'description' => 'Заказ №72',
           ),
           $idempotenceKey
       );
-      $redirect =  $response->confirmation->confirmation_url;
-      echo $redirect;
-      $RedirectURL = $response->confirmation->confirmationUrl;
-      echo $RedirectURL;
+    //редирект на платежный шлюз
       return redirect($response->confirmation->confirmationUrl);
-      //dd($response);
+
     }
 
     public function callback(Request $request){
-      dd($request->all());
+    Log::info('Get data from Kassa');
+    $req_dump=$request->all();
+
+    Log::info($req_dump);
+    /*  $fp = fopen('request.log', 'a');
+      fwrite($fp, $req_dump);
+      fclose($fp);*/
+    }
+    public function success () {
+      echo "Платеж оплачен!";
     }
 }
