@@ -28,6 +28,7 @@ class YandexController extends Controller
                   'type' => 'redirect',
                   'return_url' => 'https://eat.coach/yandex/success',
               ),
+              'capture' => true,
               'description' => 'Заказ №72',
           ),
           $idempotenceKey
