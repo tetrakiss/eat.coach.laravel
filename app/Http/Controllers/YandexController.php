@@ -18,26 +18,6 @@ class YandexController extends Controller
       $client = new Client();
       $client->setAuth(env('YANDEX_KASSA_SHOPID'), env('YANDEX_KASSA_SECRET'));
 
-
-      /*$response = $client->createPayment(
-          array(
-              'amount' => array(
-                  'value' => '2.00',
-                  'currency' => 'RUB',
-              ),
-              'payment_method_data' => array(
-                  'type' => 'bank_card',
-              ),
-              'confirmation' => array(
-                  'type' => 'redirect',
-                  'return_url' => 'https://eat.coach/yandex/success',
-              ),
-              'capture' => true,
-              'description' => 'Заказ №72',
-          ),
-          $idempotenceKey
-      );*/
-
     $response = $client->createPayment(
         array(
             "amount" => array(
@@ -71,6 +51,7 @@ class YandexController extends Controller
         ),
         $idempotenceKey
     );
+      session(['pay_id' => $response->id]);
     //редирект на платежный шлюз
       return redirect($response->confirmation->confirmationUrl);
 
