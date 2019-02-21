@@ -7,6 +7,7 @@ use YandexCheckout\Client;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Cookie;
 use DB;
+use App\Http\Requests\ConsultationRequest;
 use Illuminate\Support\Facades\Storage;
 class YandexController extends Controller
 {
@@ -16,7 +17,7 @@ class YandexController extends Controller
       return view('products.consultation.create')->with('consultation',$consultation);
     }
 
-    public function store (Request $request) {
+    public function store (ConsultationRequest $request) {
 
       $consultation= DB::table('consultation')->where('id', $request->type)->first();
 
@@ -32,7 +33,7 @@ class YandexController extends Controller
                   "currency" => "RUB"
               ),
               'capture' => true,
-              'description' => 'Оплата консультации '.$request->first_name.' '.$request->last_name,
+              'description' =>'Оплата консультации '.$request->first_name.' '.$request->last_name,
               "confirmation" => array(
                   "type" => "redirect",
                   "return_url" => "https://eat.coach/yandex/success"
@@ -42,7 +43,7 @@ class YandexController extends Controller
                   "email" => "togulev@gmail.com",
                   "items" => array(
                     array(
-                        'description' => 'Оплата консультации '.$request->first_name.' '.$request->last_name,
+                        'description' => $consultation->title,
                         "quantity" => "1.00",
                         "amount" => array(
                             "value" => $consultation->price,
