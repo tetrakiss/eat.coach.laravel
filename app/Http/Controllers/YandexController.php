@@ -80,7 +80,6 @@ class YandexController extends Controller
 
     public function callback(Request $request){
     $rawData=json_decode(file_get_contents("php://input"));
-    //print_r($request->all());
     $yandex_id= $rawData->object->id;
     $status =  $rawData->object->status;
     $amout = $rawData->object->amount->value;
