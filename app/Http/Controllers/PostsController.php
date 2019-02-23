@@ -151,21 +151,14 @@ class PostsController extends Controller
 
        if ($request->hasFile('title_image')) {
 
-         /*$cover = $request->file('title_image');
-         $extension = $cover->getClientOriginalExtension();
-         Storage::disk('public')->put($cover->getFilename().'.'.$extension,  File::get($cover));
-
-         $post->title_image=$cover->getFilename().'.'.$extension;
-         */
-
-
+        
          $image = $request->file('title_image');
          $path = public_path(). '/uploads/posts/';
          $filename = $image->getClientOriginalName();
          //$filename = $image->getClientOriginalName() . '.' . $image->getClientOriginalExtension();
          $image->move($path, $filename);
 
-         $post->title_image='/uploads/posts/'. $image->getClientOriginalName();
+         $post->title_image=$image->getClientOriginalName();
          //image optimization for different monitor sizes - need to test!
          $this->imageOptimizationWhenPostCreate('/uploads/posts/'. $image->getClientOriginalName());
 
