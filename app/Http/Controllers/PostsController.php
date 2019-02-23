@@ -151,7 +151,7 @@ class PostsController extends Controller
 
        if ($request->hasFile('title_image')) {
 
-        
+
          $image = $request->file('title_image');
          $path = public_path(). '/uploads/posts/';
          $filename = $image->getClientOriginalName();
@@ -260,7 +260,9 @@ class PostsController extends Controller
         $path = public_path(). '/uploads/posts/';
         $filename = $image->getClientOriginalName();
         $image->move($path, $filename);
-        $post->title_image='/uploads/posts/'. $image->getClientOriginalName();
+        $post->title_image=$image->getClientOriginalName();
+        //image optimization for different monitor sizes - need to test!
+        $this->imageOptimizationWhenPostCreate('/uploads/posts/'. $image->getClientOriginalName());
       }
 
       $message = $request->body;
