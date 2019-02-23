@@ -89,5 +89,8 @@
   @endforeach
 
 </div>
+<div class="uk-margin uk-card uk-card-default uk-card-body">
+  {{$posts->links('vendor/pagination/uikit') }}
+</div>
 
 @endsection

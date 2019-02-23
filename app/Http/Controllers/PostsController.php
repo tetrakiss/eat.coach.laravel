@@ -35,7 +35,8 @@ class PostsController extends Controller
         //OpenGraph::addImage($post->cover->url);
         OpenGraph::addProperty('type', 'articles');
 
-      $posts = Posts::with('author')->latest()->get();
+    //  $posts = Posts::with('author')->latest()->get();
+      $posts = Posts::with('author')->latest()->paginate(6);
 
         return view('posts.index', compact('posts'));
     }
