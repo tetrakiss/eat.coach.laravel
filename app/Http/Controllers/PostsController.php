@@ -41,11 +41,27 @@ class PostsController extends Controller
         return view('posts.index', compact('posts'));
     }
     public function imageOptimization($posts){
+
       $original_photo_storage = public_path('uploads/posts/original_photos/');
       $large_photos_storage = public_path('uploads/posts/large_photos/');
       $medium_photos_storage = public_path('uploads/posts/medium_photos/');
       $mobile_photos_storage = public_path('uploads/posts/mobile_photos/');
       $tiny_photos_storage = public_path('uploads/posts/tiny_photos/');
+      if (!file_exists($original_photo_storage)) {
+           mkdir($original_photo_storage, 777, true);
+       }
+       if (!file_exists($large_photos_storage)) {
+            mkdir($large_photos_storage, 777, true);
+        }
+        if (!file_exists($medium_photos_storage)) {
+             mkdir($medium_photos_storage, 777, true);
+         }
+         if (!file_exists($mobile_photos_storage)) {
+              mkdir($mobile_photos_storage, 777, true);
+          }
+          if (!file_exists($tiny_photos_storage)) {
+               mkdir($tiny_photos_storage, 777, true);
+           }
       foreach ($posts as $p) {
         $path=public_path($p->title_image);
         if(file_exists($path)) {
