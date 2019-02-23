@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Symfony\Component\Process\Process;
+use Spatie\Sitemap\SitemapGenerator;
 class DeployController extends Controller
 {
   public function deploy(Request $request)
@@ -18,5 +19,8 @@ class DeployController extends Controller
               echo $buffer;
           });
      }
+  }
+  public function sitemapGenerator(){
+    SitemapGenerator::create(config('app.url'))->writeToFile(public_path('sitemap.xml'));
   }
 }

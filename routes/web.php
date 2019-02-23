@@ -53,6 +53,8 @@ Auth::routes(['register' => false]);
 
 Route::post('github/deploy', 'DeployController@deploy');
 
+Route::get('sitemap', 'DeployController@sitemapGenerator');
+
 
 /*
 |--------------------------------------------------------------------------
