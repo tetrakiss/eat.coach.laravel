@@ -22,6 +22,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="{{ asset('favico/ms-icon-144x144.png') }}">
 <meta name="theme-color" content="#ee4037">
+<meta name="yandex-verification" content="5c2ef6e4a5190d64" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
