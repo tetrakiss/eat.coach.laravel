@@ -35,10 +35,38 @@
                 @isset($post['title_image'])
                   <div class="uk-card-media-top">
                     @auth
-                    <a href="{{action('PostsController@show', $post['id'])}}">{!! Html::image($post['title_image']) !!}</a>
+                    <a href="{{action('PostsController@show', $post['id'])}}">
+
+                      <picture>
+                        <source
+                         media = "(min-width:860px)"
+                         srcset="{{asset('uploads/posts/large_photos/'.$post['title_image'].' 860w')}}">
+                        <source
+                        media = "(min-width:640px)"
+                        srcset = "{{asset('uploads/posts/medium_photos/'.$post['title_image'].' 640w')}}" >
+                        <source
+                        media = "(max-width:420px)"
+                        srcset = "{{asset('uploads/posts/mobile_photos/'.$post['title_image'].' 420w')}}" >
+                        <img src="{{asset('uploads/posts/medium_photos/'.$post['title_image'])}}" >
+                      </picture>
+
+                    </a>
                     @endauth
                     @guest
-                    <a href="{{route('posts.user.show', $post['id'])}}">{!! Html::image($post['title_image']) !!}</a>
+                    <a href="{{route('posts.user.show', $post['id'])}}">
+                      <picture>
+                        <source
+                         media = "(min-width:860px)"
+                         srcset="{{asset('uploads/posts/large_photos/'.$post['title_image'].' 860w')}}">
+                        <source
+                        media = "(min-width:640px)"
+                        srcset = "{{asset('uploads/posts/medium_photos/'.$post['title_image'].' 640w')}}" >
+                        <source
+                        media = "(max-width:420px)"
+                        srcset = "{{asset('uploads/posts/mobile_photos/'.$post['title_image'].' 420w')}}" >
+                        <img src="{{asset('uploads/posts/medium_photos/'.$post['title_image'])}}" >
+                      </picture>
+                    </a>
                     @endguest
                   </div>
                   @endisset
@@ -75,10 +103,36 @@
                   @isset($post['title_image'])
                   <div class="uk-card-media-bottom">
                     @auth
-                    <a href="{{action('PostsController@show', $post['id'])}}">{!! Html::image($post['title_image']) !!}</a>
+                    <a href="{{action('PostsController@show', $post['id'])}}">
+                      <picture>
+                        <source
+                         media = "(min-width:860px)"
+                         srcset="{{asset('uploads/posts/large_photos/'.$post['title_image'].' 860w')}}">
+                        <source
+                        media = "(min-width:640px)"
+                        srcset = "{{asset('uploads/posts/medium_photos/'.$post['title_image'].' 640w')}}" >
+                        <source
+                        media = "(max-width:420px)"
+                        srcset = "{{asset('uploads/posts/mobile_photos/'.$post['title_image'].' 420w')}}" >
+                        <img src="{{asset('uploads/posts/medium_photos/'.$post['title_image'])}}" >
+                      </picture>
+                    </a>
                     @endauth
                     @guest
-                    <a href="{{route('posts.user.show', $post['id'])}}">{!! Html::image($post['title_image']) !!}</a>
+                    <a href="{{route('posts.user.show', $post['id'])}}">
+                      <picture>
+                        <source
+                         media = "(min-width:860px)"
+                         srcset="{{asset('uploads/posts/large_photos/'.$post['title_image'].' 860w')}}">
+                        <source
+                        media = "(min-width:640px)"
+                        srcset = "{{asset('uploads/posts/medium_photos/'.$post['title_image'].' 640w')}}" >
+                        <source
+                        media = "(max-width:420px)"
+                        srcset = "{{asset('uploads/posts/mobile_photos/'.$post['title_image'].' 420w')}}" >
+                        <img src="{{asset('uploads/posts/medium_photos/'.$post['title_image'])}}" >
+                      </picture>
+                    </a>
                     @endguest
                   </div>
                   @endisset

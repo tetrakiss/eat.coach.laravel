@@ -37,7 +37,7 @@ class PostsController extends Controller
 
     //  $posts = Posts::with('author')->latest()->get();
       $posts = Posts::with('author')->latest()->paginate(6);
-      $this->imageOptimization($posts);
+    //  $this->imageOptimization($posts);
         return view('posts.index', compact('posts'));
     }
     public function imageOptimization($posts){
@@ -48,19 +48,19 @@ class PostsController extends Controller
       $mobile_photos_storage = public_path('uploads/posts/mobile_photos/');
       $tiny_photos_storage = public_path('uploads/posts/tiny_photos/');
       if (!file_exists($original_photo_storage)) {
-           mkdir($original_photo_storage, 777, true);
+           mkdir($original_photo_storage, 0777, true);
        }
        if (!file_exists($large_photos_storage)) {
-            mkdir($large_photos_storage, 777, true);
+            mkdir($large_photos_storage, 0777, true);
         }
         if (!file_exists($medium_photos_storage)) {
-             mkdir($medium_photos_storage, 777, true);
+             mkdir($medium_photos_storage, 0777, true);
          }
          if (!file_exists($mobile_photos_storage)) {
-              mkdir($mobile_photos_storage, 777, true);
+              mkdir($mobile_photos_storage, 0777, true);
           }
           if (!file_exists($tiny_photos_storage)) {
-               mkdir($tiny_photos_storage, 777, true);
+               mkdir($tiny_photos_storage, 0777, true);
            }
       foreach ($posts as $p) {
         $path=public_path($p->title_image);
@@ -83,6 +83,51 @@ class PostsController extends Controller
     }
 
     }
+
+    public function imageOptimizationWhenPostCreate($SourceImagePath){
+
+      $original_photo_storage = public_path('uploads/posts/original_photos/');
+      $large_photos_storage = public_path('uploads/posts/large_photos/');
+      $medium_photos_storage = public_path('uploads/posts/medium_photos/');
+      $mobile_photos_storage = public_path('uploads/posts/mobile_photos/');
+      $tiny_photos_storage = public_path('uploads/posts/tiny_photos/');
+      if (!file_exists($original_photo_storage)) {
+           mkdir($original_photo_storage, 0777, true);
+       }
+       if (!file_exists($large_photos_storage)) {
+            mkdir($large_photos_storage, 0777, true);
+        }
+        if (!file_exists($medium_photos_storage)) {
+             mkdir($medium_photos_storage, 0777, true);
+         }
+         if (!file_exists($mobile_photos_storage)) {
+              mkdir($mobile_photos_storage, 0777, true);
+          }
+          if (!file_exists($tiny_photos_storage)) {
+               mkdir($tiny_photos_storage, 0777, true);
+           }
+
+        $path=public_path($SourceImagePath);
+        if(file_exists($path)) {
+          $image = Image::make($path);
+          $image->save($original_photo_storage.basename($path),100)
+          ->resize(860, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->save($large_photos_storage.basename($path),85)
+          ->resize(640, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->save($medium_photos_storage.basename($path),85)
+          ->resize(420, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->save($mobile_photos_storage.basename($path),85)
+          ->resize(10, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->blur(1)->save($tiny_photos_storage.basename($path),85);
+        }
+
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -121,6 +166,8 @@ class PostsController extends Controller
          $image->move($path, $filename);
 
          $post->title_image='/uploads/posts/'. $image->getClientOriginalName();
+         //image optimization for different monitor sizes - need to test!
+         $this->imageOptimizationWhenPostCreate('/uploads/posts/'. $image->getClientOriginalName());
 
        }
 
@@ -153,6 +200,9 @@ class PostsController extends Controller
 				  /* ->resize(300, 200) */
 				  ->encode($mimetype, 100) 	// encode file to the specified mimetype
 				  ->save(public_path($filepath));
+
+          //image optimization for different monitor sizes - need to test!
+          $this->imageOptimizationWhenPostCreate($filepath);
 
 				$new_src = asset($filepath);
 				$img->removeAttribute('src');
