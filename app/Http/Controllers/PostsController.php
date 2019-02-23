@@ -37,10 +37,36 @@ class PostsController extends Controller
 
     //  $posts = Posts::with('author')->latest()->get();
       $posts = Posts::with('author')->latest()->paginate(6);
-
+      $this->imageOptimization($posts);
         return view('posts.index', compact('posts'));
     }
+    public function imageOptimization($posts){
+      $original_photo_storage = public_path('uploads/posts/original_photos/');
+      $large_photos_storage = public_path('uploads/posts/large_photos/');
+      $medium_photos_storage = public_path('uploads/posts/medium_photos/');
+      $mobile_photos_storage = public_path('uploads/posts/mobile_photos/');
+      $tiny_photos_storage = public_path('uploads/posts/tiny_photos/');
+      foreach ($posts as $p) {
+        $path=public_path($p->title_image);
+        if(file_exists($path)) {
+          $image = Image::make($path);
+          $image->save($original_photo_storage.basename($path),100)
+          ->resize(860, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->save($large_photos_storage.basename($path),85)
+          ->resize(640, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->save($medium_photos_storage.basename($path),85)
+          ->resize(420, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->save($mobile_photos_storage.basename($path),85)
+          ->resize(10, null, function ($constraint) {
+          $constraint->aspectRatio();
+          })->blur(1)->save($tiny_photos_storage.basename($path),85);
+        }
+    }
 
+    }
     /**
      * Show the form for creating a new resource.
      *
