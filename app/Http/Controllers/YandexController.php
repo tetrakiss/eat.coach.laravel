@@ -40,7 +40,7 @@ class YandexController extends Controller
               ),
               "receipt" => array(
 
-                  "email" => "togulev@gmail.com",
+                  "email" => $request->email,
                   "items" => array(
                     array(
                         'description' => $consultation->title,
