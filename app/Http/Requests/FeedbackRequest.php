@@ -12,10 +12,10 @@ class FeedbackRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    /*public function authorize()
     {
         return false;
-    }
+    }*/
 
     /**
      * Get the validation rules that apply to the request.
