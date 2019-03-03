@@ -82,5 +82,12 @@
     </div>
 @yield('custom_scr')
 <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(52006340, "init", { id:52006340, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/52006340" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+@auth
+<script>
+
+var VAPID_PUBLIC_KEY = '{{ env('VAPID_PUBLIC_KEY') }}';
+</script>
+    <script src="{{ asset('js/enable-push.js') }}" defer></script>
+@endauth
 </body>
 </html>

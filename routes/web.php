@@ -26,6 +26,14 @@ $qr='ST00011|Name=ИП Тогулев Арсений Евгеньевич|Person
 });
 
 
+Route::get('/sendPaymentRecivedPush','PushController@sendPaymentRecivedPush');
+
+
+
+//store a push subscriber.
+Route::post('/push','PushController@store');
+
+
 Route::get('/', function () {
   if(!Auth::check()) {
     return redirect('posts');
