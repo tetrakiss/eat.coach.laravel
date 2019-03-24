@@ -31,10 +31,10 @@ class PushController extends Controller
 
   public function sendPaymentRecivedPush(){
 
-    $user = \App\User::find(2);
+    //$user = \App\User::find(2);
 
-    $user->notify(new PushPaymentReceived);
-  //  Notification::send(User::all(),new PushPaymentReceived);
+  //  $user->notify(new PushPaymentReceived);
+  Notification::send(User::all(),new PushPaymentReceived);
     //return redirect()->back();
 }
 }
