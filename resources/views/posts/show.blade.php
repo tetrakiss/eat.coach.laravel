@@ -18,9 +18,19 @@
           {!! html_entity_decode(htmlspecialchars_decode($post->body, ENT_QUOTES | ENT_IGNORE), ENT_QUOTES | ENT_IGNORE, "UTF-8") !!}</p>
 
       </div>
-
-
-
+  <div class="text-common uk-align-center uk-width-xxlarge">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Реклама в статье -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-0121715169223686"
+           data-ad-slot="3066550575"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+  </div>
 </div>
 
 @endsection
