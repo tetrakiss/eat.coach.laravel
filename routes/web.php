@@ -29,9 +29,6 @@ $qr='ST00011|Name=ИП Тогулев Арсений Евгеньевич|Person
 Route::get('/sendPaymentRecivedPush','PushController@sendPaymentRecivedPush');
 
 
-Route::get('test-mail', function(){
-  return view('email.poll.jktCustomer');
-});
 
 
 //store a push subscriber.
