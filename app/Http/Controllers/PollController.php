@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\JktRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\JktMail;
+use App\Mail\JktMailAdmin;
 
 class PollController extends Controller
 {
@@ -33,8 +34,8 @@ class PollController extends Controller
          'email'=> $request->email,
          'phone'=> $request->phone,
        ];
-
-       Mail::to('v.toguleva@gmail.com')->send(new JktMail($customer,$pollResults, $total));
+       Mail::to($request->email)->send(new JktMail($customer,$pollResults, $total));
+       Mail::to('v.toguleva@gmail.com')->send(new JktMailAdmin($customer,$pollResults, $total));
 
        return redirect('thx');
 
