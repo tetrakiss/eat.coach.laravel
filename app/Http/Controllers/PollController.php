@@ -8,9 +8,23 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\JktMail;
 use App\Mail\JktMailAdmin;
 
+use SEOMeta;
+use OpenGraph;
+use URL;
+
+
 class PollController extends Controller
 {
      public function deegreeJKT() {
+       SEOMeta::setTitle('Eat.coach Индекс тяжести ЖКТ');
+       SEOMeta::setDescription('Расчет индекса тяжести ЖКТ (желудочно-кишечного тракта) у детей и взрослых, для принятия дальнейших действий по лечению или коррекции');
+
+       OpenGraph::setDescription('Расчет индекса тяжести ЖКТ (желудочно-кишечного тракта) у детей и взрослых, для принятия дальнейших действий по лечению или коррекции');
+       OpenGraph::setTitle('Eat.coach Индекс тяжести ЖКТ');
+       OpenGraph::addProperty('locale', 'ru-ru');
+       OpenGraph::setUrl(URL::current());
+       //OpenGraph::addImage($post->cover->url);
+       OpenGraph::addProperty('type', 'articles');
        return view('poll.jkt');
      }
 

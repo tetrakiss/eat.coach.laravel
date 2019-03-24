@@ -2,6 +2,10 @@
 @section('custom_head_scr')
 <script src="https://unpkg.com/imask"></script>
 @endsection
+@section('seo_tags')
+{!! SEOMeta::generate() !!}
+{!! OpenGraph::generate() !!}
+@endsection
 @section('content')
 <div  uk-grid >
 
