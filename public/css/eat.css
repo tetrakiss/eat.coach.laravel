@@ -3,6 +3,9 @@
   float: left;
   margin-left: 10px;
 }
+.red {
+  color:  #c84033!important;
+}
 body, html {
   font-size: 12px!important;
 }
