@@ -29,6 +29,10 @@ $qr='ST00011|Name=ИП Тогулев Арсений Евгеньевич|Person
 Route::get('/sendPaymentRecivedPush','PushController@sendPaymentRecivedPush');
 
 
+Route::get('test-mail', function(){
+  return view('email.poll.jktCustomer');
+});
+
 
 //store a push subscriber.
 Route::post('/push','PushController@store');
@@ -96,7 +100,7 @@ Route::prefix('catalog')->group(function(){
 */
 Route::prefix('poll')->group(function(){
   Route::get("/jkt","PollController@deegreeJKT")->name('poll.jkt');
-
+  Route::post("/jkt/store", "PollController@deegreeJKTStore")->name('poll.jkt.store');
 });
 /*
 |--------------------------------------------------------------------------
