@@ -186,54 +186,54 @@
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Запор</b> {{$pollResults->zapor}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Запор</b> {{$pollResults->zapor}} балл(а)</div>
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Диарея</b> {{$pollResults->diarea}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Диарея</b> {{$pollResults->diarea}} балл(а)</div>
 
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Консистенция стула (в среднем)</b> {{$pollResults->konsisten}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Консистенция стула (в среднем)</b> {{$pollResults->konsisten}} балл(а)</div>
 
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Запах стула</b> {{$pollResults->zapah}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Запах стула</b> {{$pollResults->zapah}} балл(а)</div>
 
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Метеоризм</b> {{$pollResults->meteor}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Метеоризм</b> {{$pollResults->meteor}} балл(а)</div>
 
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Боль в животе</b> {{$pollResults->bol}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Боль в животе</b> {{$pollResults->bol}} балл(а)</div>
 
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Необъяснимая ежедневная раздражительность</b> {{$pollResults->rage}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Необъяснимая ежедневная раздражительность</b> {{$pollResults->rage}} балл(а)</div>
 
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Живот чувствительный во время осмотра педиатра/специалиста</b> {{$pollResults->feel}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Живот чувствительный во время осмотра педиатра/специалиста</b> {{$pollResults->feel}} балл(а)</div>
 
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Ваш индекс ЖКТ сотавил:</b> {{$total}} балла</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Ваш индекс ЖКТ сотавил:</b> {{$total}} балл(а)</div>
 
                             </td>
                           </tr>
