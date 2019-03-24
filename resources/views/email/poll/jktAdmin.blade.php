@@ -248,14 +248,14 @@
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
                               <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">ФИО:</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$customer->first_name $customer->last_name}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$customer->first_name}} {{$customer->last_name}}</div>
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
                               <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Контакты:</div>
                               <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;"><a href="mailto:{{$customer->email}}">{{$customer->email}}</a></div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;"><a href="tel:+{{preg_replace('/[^0-9]/', '', $customer->phone)}}">{{$customer->phone}}</a></div> 
+                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;"><a href="tel:+{{preg_replace('/[^0-9]/', '', $customer->phone)}}">{{$customer->phone}}</a></div>
 
                             </td>
                           </tr>
