@@ -186,56 +186,55 @@
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Запор</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->zapor}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Запор</b> {{$pollResults->zapor}} балла</div>
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Диарея</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->diarea}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Диарея</b> {{$pollResults->diarea}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Консистенция стула (в среднем)</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->konsisten}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Консистенция стула (в среднем)</b> {{$pollResults->konsisten}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Запах стула</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->zapah}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Запах стула</b> {{$pollResults->zapah}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Метеоризм</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->meteor}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Метеоризм</b> {{$pollResults->meteor}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Боль в животе</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->bol}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Боль в животе</b> {{$pollResults->bol}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Необъяснимая ежедневная раздражительность</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->rage}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Необъяснимая ежедневная раздражительность</b> {{$pollResults->rage}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Живот чувствительный во время осмотра педиатра/специалиста</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$pollResults->feel}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Живот чувствительный во время осмотра педиатра/специалиста</b> {{$pollResults->feel}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px 25px 0px 25px;word-break:break-word;">
-                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;">Ваш индекс ЖКТ сотавил:</div>
-                              <div style="font-family:Arial, sans-serif;font-size:14px;line-height:18px;text-align:left;color:#55575d;">{{$total}}</div>
+                              <div style="font-family:Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#222222;"><b>Ваш индекс ЖКТ сотавил:</b> {{$total}} балла</div>
+
                             </td>
                           </tr>
                           <tr>
