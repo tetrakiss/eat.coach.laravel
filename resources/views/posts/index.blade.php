@@ -31,6 +31,22 @@
   @foreach($posts as $post)
         <div>
             <div class="uk-card uk-card-default">
+
+                @if($loop->iteration  == 3 || $loop->iteration  == 6 )
+                  <div class="uk-card">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block; text-align:center;"
+                         data-ad-layout="in-article"
+                         data-ad-format="fluid"
+                         data-ad-client="ca-pub-0121715169223686"
+                         data-ad-slot="8231602562"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                  </div>
+                @endif
+
                 @if($loop->iteration  % 2 == 0)
                 @isset($post['title_image'])
                   <div class="uk-card-media-top">
