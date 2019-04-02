@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Cookie;
 use DB;
 use App\Http\Requests\ConsultationRequest;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\Mail;
 use App\Mail\PaymentAdminNotification;
 
 class YandexController extends Controller
