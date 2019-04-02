@@ -9,6 +9,9 @@ use Symfony\Component\HttpFoundation\Cookie;
 use DB;
 use App\Http\Requests\ConsultationRequest;
 use Illuminate\Support\Facades\Storage;
+
+use App\Mail\PaymentAdminNotification;
+
 class YandexController extends Controller
 {
 
@@ -90,6 +93,13 @@ class YandexController extends Controller
             ->where('yandex_id', $yandex_id)
             ->update(['status' => $status,'updated_at' => now()]);
     }
+    $yandexData=(object)[
+      'id' =>  $yandex_id,
+      'status' => $status,
+      'amout' =>   $amout,
+      'description' => $rawData->object->description;
+    ];
+      Mail::to('v.toguleva@gmail.com')->send(new PaymentAdminNotification($yandexData));
     //Storage::disk('local')->put('yandexCallback.log', print_r(json_decode(file_get_contents("php://input")), true));
 
     }
