@@ -8,7 +8,7 @@
 
 <div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
 
-  <div>
+  <!--<div>
         <div class="uk-card uk-card-hover  uk-card-default">
           <div class="uk-card-badge uk-label">3000 ₽</div>
           <div class="uk-card-header">
@@ -29,7 +29,7 @@
                 <a href="{{route('yandex.create', ['type' => 3])}}" class="uk-button uk-button-text">Оплатить</a>
             </div>
         </div>
-    </div>
+    </div>-->
   <div>
         <div class="uk-card uk-card-hover  uk-card-default">
           <div class="uk-card-badge uk-label">4000 ₽</div>
@@ -106,7 +106,7 @@
             <ul class="uk-list uk-list-striped">
               <li>Консультация для Родителя и ребенка или 2 детей из одной семьи</li>
                 <li>Консультация в Skype длительностью  90 минут</li>
-                <li>Уточнение (изменение) стратегии коррекции пищевого поведения</li>                
+                <li>Уточнение (изменение) стратегии коррекции пищевого поведения</li>
                 <li><a href="{{ url('how') }}">Как проходит консультация?</a></li>
             </ul>
 
