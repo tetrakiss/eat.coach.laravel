@@ -159,7 +159,7 @@
 
   </div>
 
-  <div class="main-container-eat">
+  <div >
       @yield('content')
     </div>
     <div class="uk-grid-collapse uk-child-width-expand@s" style="background:#f8f8f8;" uk-grid>

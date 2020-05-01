@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('landing', function ()
+{
+   return view('landing.index');
+});
 Route::get('pay', function ()
 {
    return view('payments.yandex');
