@@ -8,7 +8,7 @@
 
 
     <div class="uk-width-1-1 uk-padding-remove-top">
-        <div><h2>Мы научим есть любого ребенка!</h2></div>
+        <div><h2>Мы научим есть вашего ребенка!</h2></div>
     </div>
 
     <div class="uk-width-1-1 uk-padding-remove-bottom">
