@@ -23,6 +23,16 @@
 <meta name="msapplication-TileImage" content="{{ asset('favico/ms-icon-144x144.png') }}">
 <meta name="theme-color" content="#ee4037">
 <meta name="yandex-verification" content="5c2ef6e4a5190d64" />
+
+<meta property="og:title" content="Eat.coach" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:image" content="{{asset('/images/og-image-eat-coach.jpg')}}" />
+<meta property="og:description" content="Мы научим есть вашего ребенка!">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
