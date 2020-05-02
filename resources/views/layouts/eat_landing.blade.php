@@ -40,6 +40,7 @@
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -51,6 +52,7 @@
 </script>
     <!-- Styles -->
     <link href="{{ asset('css/eat.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/cartoon.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 @yield('custom_head_scr')
 <!-- Facebook Pixel Code -->
@@ -71,7 +73,7 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 </head>
-<body>
+<body class="neoBg">
   <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -98,88 +100,9 @@
   logged_in_greeting="Здравствуйте! Чем Мы можем Вам помочь?"
   logged_out_greeting="Здравствуйте! Чем Мы можем Вам помочь?">
 </div>
-  <div class="uk-position-relative">
 
-      <nav class="uk-navbar-container white" uk-navbar="dropbar: true; align:center;">
-
-          <div class="padding-left-header-nav uk-navbar-left">
-
-              <ul class="uk-navbar-nav">
-                <li>
-                    <a style="font-size:20px;" href="#"><i class="fas fa-bars"></i></a>
-                    <div class="padding-left-header-nav padding-right-header-nav uk-navbar-dropdown uk-navbar-dropdown-width-5">
-                      <div class="uk-navbar-dropdown-grid" uk-grid>
-                        <div class="uk-width-expand">
-                              <ul class="uk-nav uk-navbar-dropdown-nav">
-
-                                  <li><a href="{{ url('sign_up') }}"><h3>Записаться на консультацию</h3></a></li>
-                                  <li><a href="{{ url('how') }}"><h3>Как проходит консультация?</h3></a></li>
-                                  <li><a href="{{ route('catalog.consultation') }}"><h3>Оплата</h3></a></li>
-                                  <li><a href="{{ route('poll.jkt') }}"><h3>Индекс тяжести ЖКТ</h3></a></li>
-                                  <li><a href="{{ url('about') }}"><h3>Обо мне</h3></a></li>
-                                  <li><a href="{{ url('story') }}"><h3>Моя "история"</h3></a></li>
-                                  <li><a href="{{route('posts.user.index')}}"><h3>Статьи</h3></a></li>
-                                  <li><a href="{{ url('contacts') }}"><h3>Контакты</h3></a></li>
-
-                              </ul>
-                          </div>
-                          <div class="uk-child-width-auto">
-                              <ul class="uk-nav uk-navbar-dropdown-nav">
-                                  <li ><a target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i> @eat.coach</a></li>
-                                  <li><a target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i> @eat.coach</a></li>
-                                  <li><a href="mailto:v.toguleva@gmail.com"><i class="far fa-envelope"></i> v.toguleva@gmail.com</a></li>
-                                  <li><a href=" https://wa.me/79150097081"><i class="fab fa-whatsapp"></i> написать в WhatsApp</a></li>
-                                  <li><a href="tel:+79150097081"><i class="fas fa-phone"></i> +7(915) 009 70 81</a></li>
-                              </ul>
-                          </div>
-                          <div class="uk-width-auto uk-visible@l">
-                          <a href="{{URL::to('/')}}"> {!! Html::image(asset('images/eat-coach-red-logo-spoon.svg'), 'eat.coach', ['class' => 'logo-navbar-dropbar']) !!}</a>
-                          </div>
-                      </div>
-                  </div>
-                </li>
-                <li><a href="{{URL::to('/')}}">{!! Html::image(asset('images/eat-coach-red-logo.svg'), 'eat.coach', ['class' => 'logo-header-navbar']) !!}</a></li>
-
-
-              </ul>
-
-          </div>
-
-          <div class="padding-right-header-nav uk-navbar-right" >
-
-              <ul class="uk-navbar-nav">
-                  <li><a href="{{ url('contacts') }}"><span class="uk-badge nav-contact-button">Контакты</span></a></li>
-
-              </ul>
-
-          </div>
-      </nav>
-
-      <div class="uk-navbar-dropbar"></div>
-
-  </div>
-
-  <div >
-      @yield('content')
-    </div>
-    <div class="uk-grid-collapse uk-child-width-expand@s" style="background:#f8f8f8;" uk-grid>
-    <div>
-        <div class="uk-align-left uk-background-muted uk-padding">ИП Тогулев Арсений Евгеньевич
-
-ОГРНИП 319774600049851
-
-ИНН 502712853694</div>
-    </div>
-    <div>
-        <div class="uk-align-right uk-background-muted uk-padding">
-          <ul class="uk-subnav" uk-margin>
-    <li><a href="{{url('loyal')}}">пользовательское соглашение</a></li>
-    <li><span>eat.coach © {{date('Y')}}</span></li>
-</ul>
-
-          </div>
-    </div>
-
+<div class="neoBg">
+@yield('content')
 </div>
 @yield('custom_scr')
 <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(52006340, "init", { id:52006340, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/52006340" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->

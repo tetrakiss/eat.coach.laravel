@@ -12,7 +12,7 @@
 */
 Route::get('landing', function ()
 {
-   return view('landing.index');
+   return view('landing.cartoonLanding');
 });
 Route::get('me', function ()
 {

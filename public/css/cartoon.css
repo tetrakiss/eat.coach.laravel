@@ -1,0 +1,61 @@
+html, body {
+  background: #f6dabb!important;
+  height: 100%;
+}
+h2 {
+  font-family: 'Pacifico', cursive;
+  color: #4276bb;
+  font-size: 40px;
+}
+.buttonRed50 {
+  font-weight: bold;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: #ee4037;
+    color: #FFFFFF!important;
+    border-radius: 50px;
+    height: 50px;
+}
+.neo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #f6dabb;
+  box-shadow:  5px 5px 10px #e5cbae,
+               -5px -5px 10px #ffe9c8;
+}
+.buttonRed30 {
+  padding: 0 15px;
+  margin-top: 5px;
+
+  font-weight: bold;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #1d1a4f;
+    color: #FFFFFF!important;
+    border-radius: 30px;
+    height: 30px;
+}
+.buttonRed-red30 {
+  padding: 0 15px;
+  margin-top: 5px;
+
+  font-weight: bold;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #ee4037;
+    color: #FFFFFF!important;
+    border-radius: 30px;
+    height: 30px;
+}
+.price {
+  font-weight: bold;
+  font-size: 40px;
+  color: #ee4037;
+}
+.desc {
+  font-weight: bold;
+  color: #ee4037;
+  font-size: 20px;
+  text-transform: uppercase;
+}
