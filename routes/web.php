@@ -14,6 +14,11 @@ Route::get('landing', function ()
 {
    return view('landing.index');
 });
+Route::get('me', function ()
+{
+   return view('simple.me');
+});
+
 Route::get('pay', function ()
 {
    return view('payments.yandex');
