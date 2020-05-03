@@ -20,25 +20,29 @@
     </div>
     <div class="uk-width-1-1  uk-padding-remove-bottom">
         <div>
-          <a class="uk-button buttonRed30" href="">Малоежка</a>
-          <a class="uk-button buttonRed30" href="">Избирательное питание</a>
-          <a class="uk-button buttonRed30" href="">РАС</a>
-          <a class="uk-button buttonRed30" href="">Аутизм</a>
-          <a class="uk-button buttonRed30" href="">Запоры</a>
-          <a class="uk-button buttonRed30" href="">СДВГ</a>
-          <a class="uk-button buttonRed30" href="">Понос</a>
-          <a class="uk-button buttonRed30" href="">Синдромальные формы</a>
-          <a class="uk-button buttonRed30" href="">ОВЗ</a>
+          <button class="uk-button buttonRed30" href="">Малоежка</button>
+          <button class="uk-button buttonRed30" href="">Избирательное питание</button>
+          <button class="uk-button buttonRed30" href="">РАС</button>
+          <button class="uk-button buttonRed30" href="">Аутизм</button>
+          <button class="uk-button buttonRed30" href="">Запоры</button>
+          <button class="uk-button buttonRed30" href="">СДВГ</button>
+          <button class="uk-button buttonRed30" href="">Понос</button>
+          <button class="uk-button buttonRed30" href="">Синдромальные формы</button>
+          <button class="uk-button buttonRed30" href="">ОВЗ</button>
         </div>
     </div>
     <div class="uk-width-1-1 uk-padding-remove-top">
-        <div><h2>Как прохоит консультация?</h2></div>
+        <div><h2>Как проходит консультация?</h2></div>
     </div>
     <div class="uk-width-lage uk-text-center uk-padding-remove-bottom">
         <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom uk-text-left">
-          <p>Мы с родителем связываемся, и я прошу его заполнить несколько опросников, прислать имеющиеся анализы, заключения и обрисовать текущие проблемы.</p>
-          <p>Полученная информация обрабатывается, дополнительные вопросы уточняются.</p>
-          <p>Мы назначаем удобное время ⌚ для проведения консультации онлайн📱.</p>
+          <p>Вы пишете запрос в  <a href="https://wa.me/79150097081">WhatsApp</a></p>
+          <p>Или через <a href="{{ url('contacts') }}">форму обратной связи</a></p>
+          <p>Мы направляем Вам опросники и вопросы для сбора анамнеза</p>
+          <p>Мы согласовываем удобное ⌚ время для проведения консультации онлайн</p>
+          <p>После консультации Вы получаете рекомендации</p>
+          <p>Начинается совместная работа</p>
+          <p>В течение месяца после консультации любые свои вопросы Вы можете направлять в <a href="https://wa.me/79150097081">WhatsApp</a></p>
       </div>
       <div class="uk-card-body  uk-padding-remove-bottom uk-text-center">
         <a class="uk-button buttonRed-red30" href="{{ url('sign_up') }}">Записаться</a>
@@ -66,10 +70,10 @@
         <div class="desc">Первичная консультация</div>
         <div class="price">4 000 ₽</div>
         <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom uk-text-left"><p><b>Что вы получаете за эти деньги</b><br>
-          📱 Видео консульнацию в мессенжере <br>
-          ⌚ длительностью 50-60 минут<br>
-📕 Сбор анамнеза и обработка анкет<br>
-📑 Рекомендации по коррекции пищевого поведения (разработка стратегии коррекции)</p></div>
+          📱 Видео-консультацию в мессенджере длительностью ⌚50-60 минут <br>
+           📕Разработка стратегии по расширению рациона и подбор нутриентов<br>
+
+📑 Поддержка изменений в течение месяца в режиме чата <a href="https://wa.me/79150097081">WhatsApp</a></p></div>
     </div>
     <div class="uk-width-1-1 uk-padding-remove-bottom">
         <div class="uk-card-body uk-padding-remove-bottom"><a class="uk-button buttonRed50" href="{{ url('sign_up') }}">Записаться</a></div>
