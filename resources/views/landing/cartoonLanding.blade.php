@@ -35,7 +35,7 @@
         <div><h2>Как проходит консультация?</h2></div>
     </div>
     <div class="uk-width-lage uk-text-center uk-padding-remove-bottom">
-        <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom uk-text-left">
+        <div class="uk-card-body text-common  uk-padding-remove-top uk-padding-remove-bottom uk-text-left">
           <p>Вы пишете запрос в  <a href="https://wa.me/79150097081">WhatsApp</a></p>
           <p>Или через <a href="{{ url('contacts') }}">форму обратной связи</a></p>
           <p>Мы направляем Вам опросники и вопросы для сбора анамнеза</p>
@@ -69,7 +69,7 @@
         <div><h2>Сколько это стоит?</h2></div>
         <div class="desc">Первичная консультация</div>
         <div class="price">4 000 ₽</div>
-        <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom uk-text-left"><p><b>Что вы получаете за эти деньги</b><br>
+        <div class="uk-card-body text-common uk-padding-remove-top uk-padding-remove-bottom uk-text-left"><p><b>Что вы получаете за эти деньги</b><br>
           📱 Видео-консультацию в мессенджере длительностью ⌚50-60 минут <br>
            📕Разработка стратегии по расширению рациона и подбор нутриентов<br>
 
@@ -89,7 +89,7 @@
 
       <div class="uk-width-lage uk-text-center uk-padding-remove-bottom">
       <div> <img class="uk-border-circle" width="140" height="140" src="{{asset('/images/avatar-04-04-19.jpg')}}"></div>
-        <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom uk-text-left">
+        <div class=" text-common uk-card-body uk-padding-remove-top uk-padding-remove-bottom uk-text-left">
     <h2>Немного о себе</h2>
     <p>В 2017 году я закончила МГППУ с красным дипломом, и защитила диссертацию на тему <b>"Коррекция избирательного пищевого поведения у детей с РАС"</b>. В процессе написания диссертации я начала консультировать по этим вопросам и продолжаю этим заниматься.</p>
 

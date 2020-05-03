@@ -27,8 +27,8 @@ body, html {
 .text-common p, .text-common {
   font-size: calc(.00485*100vw + 12px)!important;
   letter-spacing: .025em!important;
-  line-height: 1.4!important;
-  font-weight: 200!important;
+  line-height: 1.7!important;
+  font-weight: 400!important;
 }
 .uk-card-default {
   color: #000!important;
