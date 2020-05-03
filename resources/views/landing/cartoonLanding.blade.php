@@ -100,7 +100,7 @@
   </div>
 </div>
   <div class="uk-width-lage uk-text-center uk-padding-remove-bottom">
-  <div class="uk-card-body  uk-padding-remove-bottom uk-text-center">
+  <div class="text-common uk-card-body  uk-padding-remove-bottom uk-text-center">
 <h2>🤔 Остались вопросы?</h2>
 <p>Просто заполните <a href="{{ url('contacts') }}">форму обратной связи</a> и я 👩‍💻 свяжусь с Вами сама.</p>
 <p>Буду рада новым знакомствам!</p>
