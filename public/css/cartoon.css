@@ -50,12 +50,12 @@ h2 {
 }
 .price {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
   color: #ee4037;
 }
 .desc {
   font-weight: bold;
   color: #ee4037;
-  font-size: 20px;
+  font-size: 15px;
   text-transform: uppercase;
 }
