@@ -30,7 +30,7 @@
 Что делать, если Ваш ребенок не умеет жевать?" />
 <meta property="og:title" content="Eat.coach Статьи" />
 <meta property="og:locale" content="ru-ru" />
-<meta property="og:url" content="http://127.0.0.1:8000/posts" />
+<meta property="og:url" content="https://eat.coach/i" />
 <meta property="og:type" content="articles" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
