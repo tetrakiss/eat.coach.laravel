@@ -14,6 +14,10 @@ Route::get('landing', function ()
 {
    return view('landing.cartoonLanding');
 });
+Route::get('i', function ()
+{
+   return view('landing.marafon');
+});
 Route::get('me', function ()
 {
    return view('simple.me');
