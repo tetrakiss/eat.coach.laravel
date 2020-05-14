@@ -23,6 +23,15 @@
 <meta name="msapplication-TileImage" content="{{ asset('favico/ms-icon-144x144.png') }}">
 <meta name="theme-color" content="#ee4037">
 <meta name="yandex-verification" content="5c2ef6e4a5190d64" />
+<meta name="description" content="Интенсив Ребенок не жуёт. Что делать? ">
+<meta name="keywords" content="коррекция, питание">
+<meta property="og:description" content="Онлайн формат
+8 экспертов Прямой эфир с одним из экспертов, во время которого мы обсудим:
+Что делать, если Ваш ребенок не умеет жевать?" />
+<meta property="og:title" content="Eat.coach Статьи" />
+<meta property="og:locale" content="ru-ru" />
+<meta property="og:url" content="http://127.0.0.1:8000/posts" />
+<meta property="og:type" content="articles" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
