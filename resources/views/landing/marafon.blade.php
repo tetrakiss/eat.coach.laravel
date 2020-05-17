@@ -208,6 +208,113 @@
            </div>
     </div>
 
+    <div class="uk-width-1-1 uk-text-center uk-padding-remove-bottom">
+    <div class="uk-card uk-card-default">
+               <div class="uk-card-media-top">
+                   <img src="{{asset('/images/sob-01.jpg')}}" alt="">
+               </div>
+               <div class="uk-card-body">
+                   <h3 class="uk-card-title">Мария Соболева</h3>
+                   <p class="uk-text-left">⠀
+                     💆Реабилитолог<br>
+                     ⠀
+                     🧘Инструктор ЛФК<br>
+                     ⠀
+                     Первичные специализации:<br>
+                     ⠀
+                     ✅Психоневрология<br>
+                     ⠀
+                     ✅Нейрохирургия<br>
+                     ⠀
+                     ✅Травматология<br>
+                     ⠀
+                     Наш эксперт владеет следующими методиками нейрореабилитации:<br>
+                     ⠀
+                     💚Войта<br>
+                     ⠀
+                     💚Бобат<br>
+                     ⠀
+                     💚Кастильо Моралес<br>
+                     ⠀
+                     💚PNF<br>
+                     ⠀
+                     📱С Марией мы будем обсуждать что можно сделать с помощью специалиста для навыков жевания и что можно делать самостоятельно!<br>
+</p>
+<p><iframe style="height:480px;" class="uk-responsive-width" width="853" height="480" src="https://www.youtube.com/embed/0MEqAILpwAc?showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe style="height:480px;" class="uk-responsive-width" width="853" height="480" src="https://www.youtube.com/embed/Cb6asva54e0?showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light" frameborder="0" allowfullscreen></iframe></p>
+
+
+                   <div>
+                     <a href="https://www.instagram.com/MARI_SOBOLEVA_1983/" class="uk-icon-button social-button-big uk-margin-small-right " uk-icon="icon: instagram; ratio: 2"></a>
+
+
+                   </div>
+               </div>
+           </div>
+    </div>
+
+    <div class="uk-width-1-1 uk-text-center uk-padding-remove-bottom">
+    <div class="uk-card uk-card-default">
+               <div class="uk-card-media-top">
+                   <img src="{{asset('/images/jl-01.jpg')}}" alt="">
+               </div>
+               <div class="uk-card-body">
+                   <h3 class="uk-card-title">Юлия Шашина</h3>
+                   <p class="uk-text-left">⠀
+                     👩‍🏫Нейрологопед<br>
+ ⠀
+ Юлия окончила более 45 курсов повышения квалификации ❗️❗️❗️Опыт работы 19 лет❗️❗️❗️<br>
+ ⠀
+ Работает с детьми от 2 месяцев и со взрослыми со следующими нарушениями:<br>
+ ⠀
+ ✅Дислалия<br>
+ ⠀
+ ✅Дизартрия<br>
+ ⠀
+ ✅Афазия<br>
+ ⠀
+ ✅Анартрия<br>
+ ⠀
+ ✅Дисфагия<br>
+ ⠀
+ ✅Нарушения пищевого поведения<br>
+ ⠀
+ При<br>
+ ⠀
+ ❗Последствия ЧМТ и инсультов<br>
+ ⠀
+ ❗ДЦП<br>
+ ⠀
+ ❗ТМНР<br>
+ ⠀
+ ❗Генетика<br>
+ ⠀
+ Юлия ведёт пищевые тренинги и работает с младенцами (обучение сосания, глотания)<br>
+ ⠀
+ 📱С Юлией мы будем обсуждать:<br>
+ ⠀
+ ❗️В каких ситуациях стоит обратиться за помощью к нейрологопеду?<br>
+ ⠀
+ ❗️Как начать учить жевать, чтобы это было максимально безопасно?<br>
+ ⠀
+ ❗️Гаджеты во время кормления.<br>
+ ⠀
+ И много других не менее важных вопросов.<br>
+</p>
+<p><iframe style="height:480px;" class="uk-responsive-width" width="853" height="480" src="https://www.youtube.com/embed/Ph3T0RDgZOM?showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe style="height:480px;" class="uk-responsive-width" width="853" height="480" src="https://www.youtube.com/embed/o-kdWnN0RXg?showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe style="height:480px;" class="uk-responsive-width" width="853" height="480" src="https://www.youtube.com/embed/HsIir079hSY?showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light" frameborder="0" allowfullscreen></iframe></p>
+
+
+                   <div>
+                     <a href="https://www.instagram.com/neirologoped_shashina/" class="uk-icon-button social-button-big uk-margin-small-right " uk-icon="icon: instagram; ratio: 2"></a>
+
+
+                   </div>
+               </div>
+           </div>
+    </div>
+
 
     <div class="uk-width-1-1 uk-padding-remove-bottom ">
         <div>
