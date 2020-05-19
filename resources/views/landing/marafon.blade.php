@@ -315,6 +315,45 @@
            </div>
     </div>
 
+    <div class="uk-width-1-1 uk-text-center uk-padding-remove-bottom">
+    <div class="uk-card uk-card-default">
+               <div class="uk-card-media-top">
+                   <img src="{{asset('/images/v-01.jpg')}}" alt="">
+               </div>
+               <div class="uk-card-body">
+                   <h3 class="uk-card-title">Валентина Тогулева</h3>
+                   <p class="uk-text-left">⠀
+                     ✅ Специалист по коррекции пищевого поведения у детей и взрослых<br>
+ ⠀
+ ✅Дефектолог<br>
+ ⠀
+ ✅ Нутрициолог<br>
+ ⠀
+ ✅ Химик-биотехнолог (Мембранные технологии, Нанотехнологии)<br>
+ ⠀
+ 🥦Более 200 сложных кейсов по пищевому поведению, которые были успешно решены<br>
+ ⠀
+ 🥑Более 500 консультаций у взрослых и детей<br>
+ ⠀
+ ❣️Организатор и идейный вдохновитель интенсива "Ребёнок не жуёт. Что делать?"<br>
+ ⠀
+ ❗Сегодня будем обсуждать, что необходимо для введения изменений и начала работы!<br>
+ ⠀
+ ❗Как начать и что учесть!<br>
+</p>
+<p><iframe style="height:480px;" class="uk-responsive-width" width="853" height="480" src="https://www.youtube.com/embed/-BvSMw0tD6E?showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe style="height:480px;" class="uk-responsive-width" width="853" height="480" src="https://www.youtube.com/embed/BIekb7ASXus?showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light" frameborder="0" allowfullscreen></iframe></p>
+
+
+                   <div>
+                     <a href="https://www.instagram.com/neirologoped_shashina/" class="uk-icon-button social-button-big uk-margin-small-right " uk-icon="icon: instagram; ratio: 2"></a>
+
+
+                   </div>
+               </div>
+           </div>
+    </div>
+
 
     <div class="uk-width-1-1 uk-padding-remove-bottom ">
         <div>
