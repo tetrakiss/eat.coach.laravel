@@ -118,6 +118,7 @@
                                   <li><a href="{{ route('catalog.consultation') }}"><h3>Оплата</h3></a></li>
                                   <li><a href="{{ route('poll.jkt') }}"><h3>Индекс тяжести ЖКТ</h3></a></li>
                                   <li><a href="{{ url('about') }}"><h3>Обо мне</h3></a></li>
+                                  <li><a href="{{ url('testimonials') }}"><h3>Отзывы</h3></a></li>
                                   <li><a href="{{ url('story') }}"><h3>Моя "история"</h3></a></li>
                                   <li><a href="{{route('posts.user.index')}}"><h3>Статьи</h3></a></li>
                                   <li><a href="{{ url('contacts') }}"><h3>Контакты</h3></a></li>

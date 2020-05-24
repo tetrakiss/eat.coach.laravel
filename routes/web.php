@@ -149,6 +149,9 @@ Route::get('/about', function() {
 Route::get('/how', function() {
   return view('common.how');
 });
+Route::get('/testimonials', function() {
+  return view('common.testimonials');
+});
 
 Route::get('/sign_up', function() {
   return view('common.signup');
