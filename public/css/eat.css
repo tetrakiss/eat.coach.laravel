@@ -9,6 +9,15 @@
 body, html {
   font-size: 12px!important;
 }
+.round-button {
+  background-color: #c84033!important;
+  border-radius: 50px;
+
+}
+.round-button-link  a {
+  color: #FFF!important;
+
+}
 .uk-link, a {
   color: #c84033!important;
 }
@@ -18,6 +27,7 @@ body, html {
 .uk-label {
   background-color: #c84033!important
 }
+
 .contact-icon {
   text-align: center;
   color: #c84033;

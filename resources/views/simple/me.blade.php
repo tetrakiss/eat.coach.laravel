@@ -20,6 +20,10 @@
         <b><a href="https://eat.coach">EAT.COACH</a></b>
       </div>
     </div>
+    <div  class="uk-width-1-1 ">
+        <a  href="{{ route('catalog.consultation') }}" class="uk-button round-button-link round-button uk-button-large"><span class="uk-badge nav-contact-button">Оплата консультации</span></a>
+      
+          </div>
 
     <div class="uk-width-1-1 uk-padding-remove-bottom ">
         <div>
