@@ -18,6 +18,9 @@ body, html {
   color: #FFF!important;
 
 }
+.button-red {
+  background-color: #c84033!important;
+}
 .uk-link, a {
   color: #c84033!important;
 }
