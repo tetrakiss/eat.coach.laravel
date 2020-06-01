@@ -32,6 +32,7 @@
           <a href="https://www.facebook.com/eat.coach" class="uk-icon-button social-button-big uk-margin-small-right neo" uk-icon=" icon: facebook; ratio: 2"></a>
 
           <a href="mailto:v.toguleva@gmail.com" class="uk-icon-button social-button-big uk-margin-small-right neo" uk-icon="icon: mail; ratio: 2"></a>
+          <a href="https://www.youtube.com/channel/UCsAPHU89wNvUs_SqpzzoqXg" class="uk-icon-button social-button-big uk-margin-small-right neo" uk-icon="icon: youtube; ratio: 2"></a>
 
         </div>
 
@@ -42,11 +43,16 @@
         </div>
     </div>
 
-
+    <div  class="uk-width-1-1 ">
+        <a  href="{{ route('landing.me') }}" class="uk-button round-button-link round-button "><span class="uk-badge button-red">Интенсив "Ребенок не жует. Что делать?"</span></a>
+    </div>
+    <div  class="uk-width-1-1 ">
+        <a  href="{{URL::to('/')}}" class="uk-button round-button-link round-button "><span class="uk-badge button-red">Почитать мои статьи</span></a>
+    </div>
 
 
     <div class="uk-width-medium marignZero">
-        <div class="uk-card-body  marignZero uk-padding-remove-bottom  uk-padding-remove-top uk-text-left" >
+        <div class="uk-card-body  marignZero uk-padding-remove-bottom   uk-text-left" >
     <h3>Немного о себе, для тех, кто меня совсем не знает:</h3>
     <p>В 2017 году я закончила МГППУ с красным дипломом, и защитила диссертацию на тему "Коррекция избирательного пищевого поведения у детей с РАС". В процессе написания диссертации я начала консультировать по этим вопросам и продолжаю этим заниматься.</p>
     <p>Первое высшее у меня - РХТУ им. Менделеева (Нанотехнологии), которое безусловно помогло мне разобраться в этой деятельности.</p>

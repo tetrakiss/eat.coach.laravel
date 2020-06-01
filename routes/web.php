@@ -21,7 +21,7 @@ Route::get('i', function ()
 Route::get('me', function ()
 {
    return view('simple.me');
-});
+})->name('landing.me');
 
 Route::get('pay', function ()
 {
