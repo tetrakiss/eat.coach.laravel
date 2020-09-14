@@ -99,7 +99,7 @@ class YandexController extends Controller
       $client->setAuth(env('YANDEX_KASSA_SHOPID'), env('YANDEX_KASSA_SECRET'));
       $consultation_payments= DB::table('consultation_payment')->where('status','waiting_for_capture')->orderBy('updated_at', 'desc')->get();
 
-        if (($consultation_payments->isNotEmpty()){
+        if ($consultation_payments->isNotEmpty()){
         foreach ($consultation_payments as $p) {
             $paymentId = $p->yandex_id;
 
