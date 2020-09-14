@@ -81,6 +81,18 @@ class YandexController extends Controller
       return redirect($response->confirmation->confirmationUrl);
 
     }
+    public function mtest() {
+
+      $yandexData=(object)[
+        'id' =>  1,
+        'status' => "оплачен",
+        'amout' =>   1000,
+        'description' => "Описание"
+      ];
+        Mail::to('v.toguleva@gmail.com')->send(new PaymentAdminNotification($yandexData));
+      //Storage::disk('local')->put('yandexCallback.log', print_r(json_decode(file_get_contents("php://input")), true));
+
+      }
 
     public function callback(Request $request){
     $rawData=json_decode(file_get_contents("php://input"));
