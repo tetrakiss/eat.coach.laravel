@@ -101,6 +101,7 @@ class YandexController extends Controller
       if(!empty($consultation_payments)){
         foreach ($consultation_payments as $p) {
             $paymentId = $p->yandex_id;
+            $this->withoutExceptionHandling();
             $payment = $client->getPaymentInfo($paymentId);
             DB::table('consultation_payment')
                   ->where('yandex_id', $payment->id)
