@@ -124,7 +124,7 @@ Route::name('yandex.')->prefix('yandex')->group(function(){
   Route::get("/create/{type}","YandexController@create")->name('create');
   Route::post("/store","YandexController@store")->name('store');
   Route::get("/success","YandexController@success")->name('success');
-  Route::get("/mtest","YandexController@mtest")->name('mtest');
+  Route::get("/chstaus","YandexController@getPaymentStatus")->name('getPaymentStatus');
 
 });
 

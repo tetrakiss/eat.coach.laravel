@@ -94,6 +94,24 @@ class YandexController extends Controller
 
       }
 
+    public function getPaymentStatus(){
+      $client = new Client();
+      $client->setAuth(env('YANDEX_KASSA_SHOPID'), env('YANDEX_KASSA_SECRET'));
+      $consultation_payments= DB::table('consultation_payment')->where('status','waiting_for_capture')->get();
+      if(!empty($consultation_payments)){
+        foreach ($consultation_payments as $p) {
+            $paymentId = $p->yandex_id;
+            $payment = $client->getPaymentInfo($paymentId);
+            DB::table('consultation_payment')
+                  ->where('yandex_id', $payment->id)
+                  ->update(['status' => $payment->status,'updated_at' => now()]);
+            }
+            echo $paymentId."<br>";
+        }
+
+
+    }
+
     public function callback(Request $request){
     $rawData=json_decode(file_get_contents("php://input"));
     $yandex_id= $rawData->object->id;
