@@ -99,8 +99,10 @@ class YandexController extends Controller
     $yandex_id= $rawData->object->id;
     $status =  $rawData->object->status;
     $amout = $rawData->object->amount->value;
+    $description="";
     $consultation_payment= DB::table('consultation_payment')->where('yandex_id',$yandex_id)->first();
     if(!empty($consultation_payment)){
+      $description=$consultation_payment->phone." ".$consultation_payment->first_name." ".$consultation_payment->last_name;
       DB::table('consultation_payment')
             ->where('yandex_id', $yandex_id)
             ->update(['status' => $status,'updated_at' => now()]);
@@ -109,9 +111,9 @@ class YandexController extends Controller
       'id' =>  $yandex_id,
       'status' => $status,
       'amout' =>   $amout,
-      'description' => $rawData->object->description
+      'description' => $description
     ];
-      Mail::to('v.toguleva@gmail.com')->send(new PaymentAdminNotification($yandexData));
+      Mail::to('valentina.toguleva@gmail.com')->send(new PaymentAdminNotification($yandexData));
     //Storage::disk('local')->put('yandexCallback.log', print_r(json_decode(file_get_contents("php://input")), true));
 
     }
