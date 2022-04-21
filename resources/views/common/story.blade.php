@@ -29,8 +29,8 @@
 
 <p>У Вас остались вопросы? Пишите мне любым удобным для Вас способом указанным ниже</p>
 <div style="display: flex;align-items: center;justify-content: center;">
-<a class="contact-icon" target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i></a>
-<a class="contact-icon" target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i></a>
+<!--<a class="contact-icon" target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i></a>
+<a class="contact-icon" target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i></a>-->
 <a class="contact-icon" href="mailto:v.toguleva@gmail.com"><i class="far fa-envelope"></i></a>
 <a class="contact-icon" href=" https://wa.me/79150097081"><i class="fab fa-whatsapp"></i></a>
 <a class="contact-icon" href="tel:+79150097081"><i class="fas fa-phone"></i></a>

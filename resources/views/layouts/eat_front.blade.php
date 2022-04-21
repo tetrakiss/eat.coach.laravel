@@ -136,8 +136,8 @@
                           </div>
                           <div class="uk-child-width-auto">
                               <ul class="uk-nav uk-navbar-dropdown-nav">
-                                  <li ><a target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i> @eat.coach</a></li>
-                                  <li><a target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i> @eat.coach</a></li>
+                                  <!--<li ><a target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i> @eat.coach</a></li>
+                                  <li><a target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i> @eat.coach</a></li>-->
                                   <li><a href="mailto:v.toguleva@gmail.com"><i class="far fa-envelope"></i> v.toguleva@gmail.com</a></li>
                                   <li><a href=" https://wa.me/79150097081"><i class="fab fa-whatsapp"></i> написать в WhatsApp</a></li>
                                   <li><a href="tel:+79150097081"><i class="fas fa-phone"></i> +7(915) 009 70 81</a></li>

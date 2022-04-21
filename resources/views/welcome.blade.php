@@ -53,8 +53,8 @@
 				<ul class="icons">
           <li><a href="tel:79150097081" class="icon fa-mobile"><span class="label">Телефон</span></a></li>
           <li><a href="mailto:diet.asd@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					<li><a href="https://www.instagram.com/eat.coach/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.facebook.com/valentina.toguleva" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<!--<li><a href="https://www.instagram.com/eat.coach/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="https://www.facebook.com/valentina.toguleva" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
 
 				</ul>
 				<ul class="copyright">
