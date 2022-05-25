@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use YandexCheckout\Client;
+use YooKassa\Client;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Cookie;
 use DB;
