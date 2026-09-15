@@ -25,7 +25,8 @@ class ConsultationRequest extends FormRequest
           'last_name' => 'required',
           'phone' => 'required',
           'email'=>'required|email',
-          'agree' => 'required'
+          'agree' => 'required',
+           'privacy' => 'required'
         ];
     }
     public function messages()
@@ -37,6 +38,7 @@ class ConsultationRequest extends FormRequest
             'email.required' => 'Вы не указали Ваш email!',
             'phone.required' => 'Вы не указали Ваш телефон!',
             'agree.required' => 'Вы не согласились с условиями оферты!',
+            'privacy.required' => 'Вы не согласились с условиями хранения персональных данных!',
         ];
     }
 }

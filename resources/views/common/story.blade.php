@@ -32,10 +32,10 @@
 <!--<a class="contact-icon" target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i></a>
 <a class="contact-icon" target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i></a>-->
 <a class="contact-icon" href="mailto:v.toguleva@gmail.com"><i class="far fa-envelope"></i></a>
-<a class="contact-icon" href=" https://wa.me/79150097081"><i class="fab fa-whatsapp"></i></a>
+<a class="contact-icon max-icon" href="https://max.ru/u/f9LHodD0cOISmpsGu6GP4VyYBCMe6pS4hjUhrJavY7Ld735AwvwI4yQDxlI"><img src="https://maxicons.ru/icons/MAX.svg" alt="Иконка MAX" width="32" height="32"></a>
 <a class="contact-icon" href="tel:+79150097081"><i class="fas fa-phone"></i></a>
 </div>
-<p>Либо просто заполните <a href="{{ url('contacts') }}">форму обратной связи</a> и я свяжусь с Вами сама.</p>
+<!--<p>Либо просто заполните <a href="{{ url('contacts') }}">форму обратной связи</a> и я свяжусь с Вами сама.</p>-->
 <p>Буду рада новым знакомствам!</p>
 
 </div>

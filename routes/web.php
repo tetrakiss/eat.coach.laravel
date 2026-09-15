@@ -137,6 +137,9 @@ Route::name('yandex.')->prefix('yandex')->group(function(){
 Route::get('/loyal', function() {
   return view('common.loyal-big');
 });
+Route::get('/privacy', function() {
+  return view('common.privacy');
+});
 Route::get('/story', function() {
   return view('common.story');
 });

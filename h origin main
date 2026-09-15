@@ -1,0 +1,163 @@
+[33m1809282[m Sync updates
+[33m701bcbe[m typo
+[33m925700d[m Merge branch 'master' of https://github.com/tetrakiss/eat.coach.laravel
+[33m957ae98[m typo
+[33m9b2d873[m Update index.blade.php
+[33m545adb5[m Update story.blade.php
+[33mb7d4d9e[m Update story.blade.php
+[33m250891a[m Update index.blade.php
+[33m7de4e04[m Update story.blade.php
+[33mf45c8fd[m Update story.blade.php
+[33ma9b12bd[m Update story.blade.php
+[33m3514a01[m Update index.blade.php
+[33m7ea7c80[m Update story.blade.php
+[33m950a3dd[m typo
+[33m1cb2a6e[m typo
+[33me092101[m typo
+[33mce28caa[m typo
+[33m99b5f65[m typo
+[33m6bf55b1[m typo
+[33m7ef9a3b[m initial commit
+[33m339acab[m ya check
+[33m271eff9[m ya check
+[33m7c93678[m ya check
+[33m4f29f80[m ya check
+[33m178e4a5[m ya check
+[33m78ea6fa[m ya check
+[33m857cbe8[m ya check
+[33m5cb1c28[m ya check
+[33mee52e2c[m ya check
+[33m36ebb34[m google
+[33md7b2777[m google
+[33md267c38[m price update
+[33maa5103e[m google
+[33mda77a54[m typo
+[33m238b560[m typo
+[33m25cb56c[m me page edit
+[33m25761fb[m фвв еуыешьщтшфды
+[33m2f812f5[m marafon
+[33m046db5a[m typo
+[33mefcc6b5[m typo
+[33m99937b9[m typo
+[33m2fa66c4[m typo
+[33m3f51a34[m typo
+[33mdbbc7c6[m typo
+[33m5838758[m typo
+[33mef68ae6[m typo
+[33m0dc90b4[m typo
+[33maa3aa3f[m typo
+[33mbe876e3[m add landing
+[33m94fe5c9[m add Me page
+[33m09f95e9[m add fb
+[33m1eae43a[m add year count
+[33m7e360a8[m remove new tarifs
+[33mb556e6b[m add new tarifs
+[33m5c82ab4[m add new avatar
+[33m7412a4f[m Yandex mail notification typo error
+[33m01a67ec[m Yandex mail notification typo error
+[33m974fce2[m Yandex mail notification
+[33m27d52e1[m add Poll SEO
+[33m9ef5597[m add Poll to menu
+[33mb0c45ba[m Poll mail typo edit
+[33m6a69012[m Poll mail typo edit
+[33m7b2e7b0[m Poll mail typo
+[33mfd224d3[m Poll mail
+[33m1116b60[m Poll mail
+[33m4c24ad3[m Ads
+[33m299ab9e[m Ads
+[33md8642fb[m Ads
+[33m888396b[m Ads
+[33mb5f1428[m Push notification
+[33m29e4dd2[m add messenger
+[33m8ebbab5[m Merge branch 'master' of https://github.com/tetrakiss/eat.coach.laravel
+[33m4bbdc41[m Yandex typo error
+[33me824e7e[m typo errror
+[33m7b9d41c[m add first section of image optimization
+[33m4081677[m add first section of image optimization
+[33m505db87[m add first section of image optimization
+[33m6e6f94b[m add first section of image optimization
+[33mecd3a88[m add first section of image optimization
+[33m5cfab74[m add first section of image optimization
+[33ma042686[m add pagination
+[33m4f64ddb[m add yandex tag
+[33mcb02b55[m add sitemap
+[33mc31108a[m add sitemap
+[33m1ceb159[m some improve
+[33m5b4289d[m some improve
+[33m4a1ab5a[m edit order setup
+[33m1e47f9c[m loyal add
+[33m58c8244[m loyal add
+[33m7bbe78d[m add poll
+[33me3572fa[m add poll
+[33m70b41bf[m complite calback url
+[33m63d3524[m calback url
+[33m95bb9d7[m calback url
+[33mc8e642a[m calback url
+[33m3e4bcaf[m calback url
+[33mff9e670[m calback url
+[33me064813[m srf token
+[33m57ae610[m log callback
+[33mbf685ab[m typo error
+[33m840e98d[m typo error
+[33m08d5ddc[m typo error
+[33m1d2a5c5[m add some css to payments
+[33m0f2222a[m created at for payments
+[33m978d644[m add some estore functions
+[33m5f2ccfe[m add session pay
+[33m4d252c1[m add session pay
+[33m9bc6959[m add session pay
+[33m47be63f[m add cookie pay
+[33ma4b4340[m check description
+[33maa8f6b6[m typo error
+[33m5cd6f28[m add yandex kassa log
+[33m4e74975[m add yandex kassa log
+[33ma5672ea[m add yandex kassa log
+[33m926ad92[m add yandex kassa redirect
+[33m6e01c66[m add yandex kassa redirect
+[33m7fa0fad[m add yandex kassa
+[33m39602ca[m add yandex kassa
+[33m2155f36[m typo error
+[33m497233d[m add story
+[33m8f49574[m change menu style
+[33m831e7b5[m add yandex pay style
+[33m4217f40[m add yandex pay
+[33m200cd09[m add appoiments link to children
+[33m89713a9[m Typo htts
+[33md45c968[m typo errror
+[33mc81d201[m typo errror
+[33m2f1125d[m Add metrika
+[33ma4dcdf8[m Add recaptcha
+[33m9ea575f[m Add recaptcha
+[33m37fd3d2[m Add HTTPS
+[33m9c99ba2[m Add HTTPS
+[33m72ab383[m Add some SEO
+[33m5b121b5[m add seo tools to posts first iteration
+[33m184178d[m edit contact mail
+[33mc10c8ef[m some routes improve
+[33m02eb367[m Add redirect success
+[33m2d5f078[m Add forms mail to work
+[33me9e659f[m Session extend
+[33m5026a43[m Add show post
+[33mf653267[m Add all static pages
+[33m78311ac[m Add contact page
+[33m7a3a6b4[m Add some design staff
+[33mb3a7b17[m Add some post functions
+[33mf6ba5c1[m Add posts image upload
+[33mad3fb75[m Add posts basic functions
+[33m390519b[m add autodeploy
+[33mff3a47d[m add some staff
+[33m5eac7f0[m add full style of customer view
+[33me6ea796[m add some CSS touches
+[33m86c3af5[m add appointments CRUD
+[33m12bf851[m add Comments CRUD
+[33mdce12a0[m add Comments func
+[33m29be003[m add Children CRUD
+[33m767938c[m add top menu and redirects
+[33m12d3223[m add full CRUD for customers
+[33m3c0f1c4[m add full search by customer
+[33m730b67f[m add first screen and children func
+[33m7b91bec[m add children ctrl
+[33md81b4a0[m add customer design
+[33ma3931a4[m add models
+[33m3e5bd30[m add migrations
+[33m8050630[m first commit

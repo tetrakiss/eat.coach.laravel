@@ -11,6 +11,8 @@ use App\Http\Requests\ConsultationRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\PaymentAdminNotification;
+use Illuminate\Support\Facades\Crypt;
+
 
 class YandexController extends Controller
 {
@@ -36,7 +38,7 @@ class YandexController extends Controller
                   "currency" => "RUB"
               ),
               'capture' => true,
-              'description' =>'Оплата консультации '.$request->first_name.' '.$request->last_name,
+              'description' =>'Оплата консультации '.$request->first_name.' '.$request->last_name.' '.$request->phone,
               "confirmation" => array(
                   "type" => "redirect",
                   "return_url" => "https://eat.coach/yandex/success"
@@ -62,15 +64,16 @@ class YandexController extends Controller
           ),
           $idempotenceKey
       );
+      // Crypt::encryptString()
       session(['pay_id' => $response->id]);
       DB::table('consultation_payment')->insert(
           ['yandex_id' => $response->id,
            'consultation_id' => $consultation->id,
-           'first_name' => $request->first_name,
-           'last_name' => $request->last_name,
-           'email' => $request->email,
-           'phone' => $request->phone,
-           'description' => 'Оплата консультации '.$request->first_name.' '.$request->last_name,
+           //'first_name' => $request->first_name,
+          // 'last_name' => $request->last_name,
+          // 'email' => $request->email,
+         //  'phone' => $request->phone,
+         //  'description' => 'Оплата консультации '.$request->first_name.' '.$request->last_name,
            'amount' => $consultation->price,
            'status' => 'waiting_for_capture',
            'created_at' => now(),
@@ -94,7 +97,9 @@ class YandexController extends Controller
 
       }
 
-    public function getPaymentStatus(){
+    public function getPaymentStatus()
+
+    {
       $client = new Client();
       $client->setAuth(env('YANDEX_KASSA_SHOPID'), env('YANDEX_KASSA_SECRET'));
       $consultation_payments= DB::table('consultation_payment')->where('status','waiting_for_capture')->orderBy('updated_at', 'desc')->get();
@@ -168,6 +173,7 @@ class YandexController extends Controller
       //$payment->status =='succeeded'
     }
     public function consultation () {
-      return view('products.consultation.index');
+        $consultation= DB::table('consultation')->get();
+      return view('products.consultation.index')->with('consultation',$consultation);
     }
 }

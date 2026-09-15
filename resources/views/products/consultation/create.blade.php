@@ -36,9 +36,13 @@
 Всего к оплате:  {{$consultation->price}} ₽
 </div>
 <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-            <label><input class="uk-checkbox" name="agree" type="checkbox" checked> <a href="{{url('loyal')}}">Я прочитал и соглашаюсь с условиями оферты</a>  </label>
-
-        </div>
+            <label><input class="uk-checkbox" name="agree" type="checkbox" checked> <a href="{{url('loyal')}}">Я прочитал и соглашаюсь с условиями оферты</a>  </label><br>
+            
+</div>
+<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+            
+            <label><input class="uk-checkbox" name="privacy" type="checkbox" checked> <a href="{{url('privacy')}}">Я прочитал и соглашаюсь с обработки и хранения персональных данных</a>  </label>
+</div>
 
           <div class="uk-margin">
         <button type="submit" class="uk-button uk-button-default">Оплатить</button>

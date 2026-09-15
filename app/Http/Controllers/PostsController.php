@@ -25,11 +25,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        SEOMeta::setTitle('Eat.coach Статьи');
-        SEOMeta::setDescription('Статьи по коррекции пищевого поведения у детей и взрослых');
+        SEOMeta::setTitle('Eat.coach Консультан по питанию');
+        SEOMeta::setDescription('Консультан по коррекции пищевого поведения у детей и взрослых');
 
-        OpenGraph::setDescription('Статьи по коррекции пищевого поведения у детей и взрослых');
-        OpenGraph::setTitle('Eat.coach Статьи');
+        OpenGraph::setDescription('Консультан по коррекции пищевого поведения у детей и взрослых');
+        OpenGraph::setTitle('Eat.coach Консультан по питанию');
         OpenGraph::addProperty('locale', 'ru-ru');
         OpenGraph::setUrl(URL::current());
         //OpenGraph::addImage($post->cover->url);

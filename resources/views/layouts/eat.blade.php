@@ -46,7 +46,7 @@
 @yield('custom_head_scr')
 
 <!-- Facebook Pixel Code -->
-<script>
+<!--<script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -60,7 +60,7 @@
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=2198920160244878&ev=PageView&noscript=1"
-/></noscript>
+/></noscript> -->
 <!-- End Facebook Pixel Code -->
 </head>
 <body>

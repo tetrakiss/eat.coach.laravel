@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="uk-flex-center uk-text-center neoBg" uk-grid>
-    <div class="uk-width-1-1 ">
+<!--    <div class="uk-width-1-1 ">
         <div class="uk-card-body uk-padding-remove-bottom"><a href="{{URL::to('/')}}">{!! Html::image(asset('images/eat-coach-red-logo.svg'), 'eat.coach', ['class' => 'logo-header-navbar']) !!}</a></div>
     </div>
     <div class="uk-width-1-1 uk-text-center uk-padding-remove-bottom">
@@ -390,7 +390,7 @@
     </div>
 
 
-
+-->
 </div>
 @endsection
 

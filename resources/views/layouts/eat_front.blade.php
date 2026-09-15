@@ -43,19 +43,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({
           google_ad_client: "ca-pub-0121715169223686",
           enable_page_level_ads: true
      });
-</script>
+</script>-->
     <!-- Styles -->
     <link href="{{ asset('css/eat.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 @yield('custom_head_scr')
 <!-- Facebook Pixel Code -->
-<script>
+<!--<script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -70,6 +70,7 @@
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=2198920160244878&ev=PageView&noscript=1"
 /></noscript>
+-->
 <!-- End Facebook Pixel Code -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3KPB9QSFV"></script>
@@ -82,32 +83,8 @@
 </script>
 </head>
 <body>
-  <!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v3.2'
-    });
-  };
 
-  (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ru_RU/sdk/xfbml.customerchat.js';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- Your customer chat code -->
-<div class="fb-customerchat"
-  attribution=setup_tool
-  page_id="1685848014779114"
-  theme_color="#c84033"
-  logged_in_greeting="Здравствуйте! Чем Мы можем Вам помочь?"
-  logged_out_greeting="Здравствуйте! Чем Мы можем Вам помочь?">
-</div>
   <div class="uk-position-relative">
 
       <nav class="uk-navbar-container white" uk-navbar="dropbar: true; align:center;">
@@ -139,7 +116,7 @@
                                   <!--<li ><a target="_blank" href="https://www.instagram.com/eat.coach/"><i class="fab fa-instagram"></i> @eat.coach</a></li>
                                   <li><a target="_blank" href="https://www.facebook.com/eat.coach/"><i class="fab fa-facebook"></i> @eat.coach</a></li>-->
                                   <li><a href="mailto:v.toguleva@gmail.com"><i class="far fa-envelope"></i> v.toguleva@gmail.com</a></li>
-                                  <li><a href=" https://wa.me/79150097081"><i class="fab fa-whatsapp"></i> написать в WhatsApp</a></li>
+                                  <li><a href="https://max.ru/u/f9LHodD0cOISmpsGu6GP4VyYBCMe6pS4hjUhrJavY7Ld735AwvwI4yQDxlI"><img src="https://maxicons.ru/icons/MAX.svg" alt="Иконка MAX" width="16" height="16"> написать в МАКС</a></li>
                                   <li><a href="tel:+79150097081"><i class="fas fa-phone"></i> +7(915) 009 70 81</a></li>
                               </ul>
                           </div>
@@ -149,7 +126,7 @@
                       </div>
                   </div>
                 </li>
-                <li><a href="{{URL::to('/')}}">{!! Html::image(asset('images/eat-coach-red-logo.svg'), 'eat.coach', ['class' => 'logo-header-navbar']) !!}</a></li>
+                <li><a href="{{URL::to('/')}}">{!! Html::image(asset('images/eat-coach-red-logo-ru.svg'), 'eat.coach', ['class' => 'logo-header-navbar']) !!}</a></li>
 
 
               </ul>
@@ -185,7 +162,7 @@
         <div class="uk-align-right uk-background-muted uk-padding">
           <ul class="uk-subnav" uk-margin>
     <li><a href="{{url('loyal')}}">пользовательское соглашение</a></li>
-    <li><span>eat.coach © {{date('Y')}}</span></li>
+    <li><span>КОНСУЛЬТАНТ ПО ПИТАНИЮ eat.coach © {{date('Y')}}</span></li>
 </ul>
 
           </div>
@@ -197,6 +174,15 @@
 @auth
     <script src="{{ asset('js/enable-push.js') }}" defer></script>
 @endauth
+<script src="{{ asset('js/cookie.js') }}" defer></script>
 
+<div id="cookie-popup" class="cookie-popup">
+  <div class="cookie-content">
+    <p>Мы используем файлы cookie для улучшения работы сайта. Продолжая использование, вы соглашаетесь с
+      <a href="/privacy" target="_blank">Политикой конфиденциальности</a>.
+    </p>
+    <button id="accept-cookies" class="cookie-btn">Принять</button>
+  </div>
+</div>
 </body>
 </html>

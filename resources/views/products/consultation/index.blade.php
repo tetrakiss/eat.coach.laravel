@@ -32,7 +32,7 @@
     </div>-->
   <div>
         <div class="uk-card uk-card-hover  uk-card-default">
-          <div class="uk-card-badge uk-label">8000 ₽</div>
+          <div class="uk-card-badge uk-label"> {{ number_format($consultation[0]->price, 0, '.', ' ')}} ₽</div>
           <div class="uk-card-header">
                 <h3 class="uk-card-title uk-margin-remove-bottom">Первичная консультация</h3>
             </div>
@@ -54,7 +54,7 @@
     </div>
     <div>
       <div class="uk-card uk-card-hover uk-card-default">
-        <div class="uk-card-badge uk-label">7000 ₽</div>
+        <div class="uk-card-badge uk-label">{{ number_format($consultation[1]->price, 0, '.', ' ')}} ₽</div>
         <div class="uk-card-header">
               <h3 class="uk-card-title uk-margin-remove-bottom">Повторная консультация</h3>
           </div>
@@ -65,7 +65,7 @@
                 <li>Видео консульнация в мессенжере длительностью 50-60 минут</li>
                 <li>Уточнение (изменение) стратегии коррекции пищевого поведения</li>
                 <li><a href="{{ url('how') }}">Как проходит консультация?</a></li>
-                
+
             </ul>
 
           </div>
@@ -76,7 +76,7 @@
     </div>
     <div>
       <div class="uk-card uk-card-hover uk-card-default">
-        <div class="uk-card-badge uk-label">10000 ₽</div>
+        <div class="uk-card-badge uk-label">{{ number_format($consultation[2]->price, 0, '.', ' ')}} ₽</div>
         <div class="uk-card-header">
               <h3 class="uk-card-title uk-margin-remove-bottom">Первичная консультация "1+1"</h3>
           </div>
@@ -98,7 +98,7 @@
     </div>
     <div>
       <div class="uk-card uk-card-hover uk-card-default">
-        <div class="uk-card-badge uk-label">9000 ₽</div>
+        <div class="uk-card-badge uk-label">{{ number_format($consultation[3]->price, 0, '.', ' ')}} ₽</div>
         <div class="uk-card-header">
               <h3 class="uk-card-title uk-margin-remove-bottom">Повторная консультация "1+1"</h3>
           </div>

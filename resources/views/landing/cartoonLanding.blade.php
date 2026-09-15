@@ -36,13 +36,13 @@
     </div>
     <div class="uk-width-lage uk-text-center uk-padding-remove-bottom">
         <div class="uk-card-body text-common  uk-padding-remove-top uk-padding-remove-bottom uk-text-left">
-          <p>Вы пишете запрос в  <a href="https://wa.me/79150097081">WhatsApp</a></p>
+          <p>Вы пишете запрос в  <a href="https://max.ru/u/f9LHodD0cOISmpsGu6GP4VyYBCMe6pS4hjUhrJavY7Ld735AwvwI4yQDxlI">МАКС</a></p>
           <p>Или через <a href="{{ url('contacts') }}">форму обратной связи</a></p>
           <p>Мы направляем Вам опросники и вопросы для сбора анамнеза</p>
           <p>Мы согласовываем удобное ⌚ время для проведения консультации онлайн</p>
           <p>После консультации Вы получаете рекомендации</p>
           <p>Начинается совместная работа</p>
-          <p>В течение месяца после консультации любые свои вопросы Вы можете направлять в <a href="https://wa.me/79150097081">WhatsApp</a></p>
+          <p>В течение месяца после консультации любые свои вопросы Вы можете направлять в <a href="https://max.ru/u/f9LHodD0cOISmpsGu6GP4VyYBCMe6pS4hjUhrJavY7Ld735AwvwI4yQDxlI">МАКС</a></p>
       </div>
       <div class="uk-card-body  uk-padding-remove-bottom uk-text-center">
         <a class="uk-button buttonRed-red30" href="{{ url('sign_up') }}">Записаться</a>
@@ -59,13 +59,11 @@
     </div>
     <div class="uk-width-1-1 uk-padding-remove-bottom ">
         <div>
-          <a href="https://wa.me/79150097081" class="uk-icon-button social-button-big uk-margin-small-right neo" uk-icon="icon: whatsapp; ratio: 2"></a>
-          <a href="tel:+79150097081" class="uk-icon-button social-button-big uk-margin-small-right neo" uk-icon="icon:  phone; ratio: 2"></a>
-          <a href="https://www.facebook.com/eat.coach" class="uk-icon-button social-button-big uk-margin-small-right neo" uk-icon=" icon: facebook; ratio: 2"></a>
+
           <a href="mailto:v.toguleva@gmail.com" class="uk-icon-button social-button-big uk-margin-small-right neo" uk-icon="icon: mail; ratio: 2"></a>
         </div>
     </div>
-    <div class="uk-width-1-1 uk-padding-remove-top">
+    <!--<div class="uk-width-1-1 uk-padding-remove-top">
         <div><h2>Сколько это стоит?</h2></div>
         <div class="desc">Первичная консультация</div>
         <div class="price">4 000 ₽</div>
@@ -75,6 +73,7 @@
 
 <p>📑 Поддержка изменений в течение месяца в режиме чата <a href="https://wa.me/79150097081">WhatsApp</a></p></div>
     </div>
+  -->
     <div class="uk-width-1-1 uk-padding-remove-bottom">
         <div class="uk-card-body uk-padding-remove-bottom"><a class="uk-button buttonRed50" href="{{ url('sign_up') }}">Записаться</a></div>
     </div>
